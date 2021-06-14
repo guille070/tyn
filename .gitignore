@@ -1,0 +1,13 @@
+.htaccess
+wp-config.php
+wp-content/cache
+wp-content/uploads
+wp-content/updraft
+wp-content/languages/wpml
+wp-content/logs
+wp-content/w3tc-config
+wp-content/advanced-cache.php
+*.log
+*.sql
+*.sqlite
+.DS_Store

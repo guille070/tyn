@@ -1,0 +1,62 @@
+# Translation of Plugins - AMP - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - AMP - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-10-05 11:49:46+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - AMP - Stable (latest release)\n"
+
+#: includes/amp-post-template-actions.php:63
+msgid "Analytics entry for %s is missing one of the following keys: `type`, `attributes`, or `config_data` (array keys: %s)"
+msgstr "A los datos de Analytics para %s les faltan una de las siguientes claves:  `type`, `attributes` o `config_data` (array keys: %s)"
+
+#. Author URI of the plugin/theme
+msgid "https://automattic.com"
+msgstr "https://automattic.com"
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr "Automattic"
+
+#. Description of the plugin/theme
+msgid "Add AMP support to your WordPress site."
+msgstr "Añade soporte para AMP a tu sitio WordPress."
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/automattic/amp-wp"
+msgstr "https://github.com/automattic/amp-wp"
+
+#. Plugin Name of the plugin/theme
+msgid "AMP"
+msgstr "AMP"
+
+#: templates/meta-time.php:6
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr "hace %s"
+
+#: templates/meta-taxonomy.php:1 templates/meta-taxonomy.php:9
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: includes/class-amp-post-template.php:247
+msgid "Path validation for template (%s) failed. Path cannot traverse and must be located in `%s`."
+msgstr "La ruta de validación para la plantilla (%s) falló. La ruta no puede ser transversal y debe estar situada en `%s`."
+
+#: includes/class-amp-post-template.php:78
+msgid "Called for non-existant key (\"%s\")."
+msgstr "Llamada una clave que no existe (\"%s\")."
+
+#: includes/class-amp-content.php:82
+msgid "Sanitizer (%s) must extend `AMP_Base_Sanitizer`"
+msgstr "El sanitizer (%s) debe ampliar `AMP_Base_Sanitizer`"
+
+#: includes/class-amp-content.php:57
+msgid "Embed Handler (%s) must extend `AMP_Embed_Handler`"
+msgstr "El gestor de incrustación (%s) debe ampliar `AMP_Embed_Handler`"
