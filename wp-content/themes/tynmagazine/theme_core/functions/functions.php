@@ -41,9 +41,17 @@ add_action( 'after_setup_theme', 'theme_setup' );
 * Load custom Jquery
 */
 function theme_load_custom_jquery() {
+    wp_enqueue_style( 'theme-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700', false );
+    wp_enqueue_style( 'theme-bootstrap', get_template_directory_uri() . '/front/css/bootstrap.css', array(), THEME_STYLE_VERSION, 'all' );
+    wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/front/css/style.css', array(), THEME_STYLE_VERSION, 'all' );
+    wp_enqueue_style( 'theme-fonts', get_template_directory_uri() . '/front/css/fonts.css', array(), THEME_STYLE_VERSION, 'all' );
+
     wp_deregister_script( 'jquery' ); 
-    wp_register_script('jquery-custom', get_template_directory_uri() . '/front/js/jquery-2.2.4.min.js', __FILE__, false, '2.2.4', true);
+    wp_register_script('jquery-custom', get_template_directory_uri() . '/front/js/jquery-2.2.4.min.js', false, '2.2.4', true);
     wp_enqueue_script('jquery-custom'); 
+
+    wp_enqueue_script('theme-core', get_template_directory_uri() . '/front/js/core.min.js', array('jquery-custom'), THEME_STYLE_VERSION, true);
+    wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/front/js/script.js', array('jquery-custom'), THEME_STYLE_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'theme_load_custom_jquery'); 
 
@@ -52,13 +60,9 @@ add_action('wp_enqueue_scripts', 'theme_load_custom_jquery');
 */
 function theme_scripts_styles()
 {
-    wp_enqueue_style( 'theme-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700', false );
-    wp_enqueue_style( 'theme-bootstrap', get_template_directory_uri() . '/front/css/bootstrap.css', array(), THEME_STYLE_VERSION, 'all' );
-    wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/front/css/style.css', array(), THEME_STYLE_VERSION, 'all' );
-    wp_enqueue_style( 'theme-fonts', get_template_directory_uri() . '/front/css/fonts.css', array(), THEME_STYLE_VERSION, 'all' );
+    
 
-    wp_enqueue_script('theme-core', get_template_directory_uri() . '/front/js/core.min.js', array('jquery-custom'), THEME_STYLE_VERSION, true);
-    wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/front/js/script.js', array('jquery-custom'), THEME_STYLE_VERSION, true);
+    
 }
 add_action( 'enqueue_block_assets', 'theme_scripts_styles' );
 
@@ -141,7 +145,11 @@ function theme_get_header()
                         <!-- RD Navbar Toggle-->
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                         <!-- RD Navbar Brand-->
-                        <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><img src="images/logo-dark-266x54.png" width="266" height="54" alt=""></a></div>
+                        <div class="rd-navbar-brand">
+                            <a class="brand-name" href="<?php echo home_url(); ?>">
+                                <img src="<?php echo get_stylesheet_directory_uri() ?>/front/images/logo-tynmag-retina.png" width="266"  alt="<?php bloginfo( 'name' ); ?>">
+                            </a>
+                        </div>
                         <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
                         <div class="rd-navbar-top-panel rd-navbar-collapse">
                             <div class="rd-navbar-top-panel-inner">
