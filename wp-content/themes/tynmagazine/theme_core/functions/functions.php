@@ -52,6 +52,8 @@ function theme_load_custom_jquery() {
 
     wp_enqueue_script('theme-core', get_template_directory_uri() . '/front/js/core.min.js', array('jquery-custom'), THEME_STYLE_VERSION, true);
     wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/front/js/script.js', array('jquery-custom'), THEME_STYLE_VERSION, true);
+
+    wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/css/custom-style.css', array(), THEME_STYLE_VERSION, 'all' );
 }
 add_action('wp_enqueue_scripts', 'theme_load_custom_jquery'); 
 
@@ -130,10 +132,7 @@ function theme_options_scripts_footer(){
 * Theme Header
 */
 function theme_get_header() 
-{
-    
-    
-    ?>
+{ ?>
 
     <header class="page-header header-home-1">
         <!-- RD Navbar-->
@@ -163,36 +162,16 @@ function theme_get_header()
                     </div>
                     <div class="rd-navbar-aside-right">
                         <div class="rd-navbar-nav-wrap">
-                            <!-- RD Navbar Nav-->
-                            <ul class="rd-navbar-nav">
-                                <li class="active"><a href="./">Home</a>
-                                    <!-- RD Navbar Dropdown-->
-                                    <ul class="rd-navbar-dropdown">
-                                        <li><a href="home-2.html">Home 2</a></li>
-                                        <li><a href="home-3.html">Home 3</a></li>
-                                        <li><a href="landing.html">Landing	</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="world.html">World</a>
-                                <ul class="rd-navbar-dropdown">
-                                    <li><a href="post.html">Post</a></li>
-                                </ul>
-                                </li>
-                                <li><a href="contacts.html">Contacts	</a></li>
-                                <li><a href="#">Pages</a>
-                                    <!-- RD Navbar Megamenu-->
-                                    <ul class="rd-navbar-dropdown">
-                                        <li><a href="typography.html">Typography</a></li>
-                                        <li><a href="tabs-and-accordions.html">Tabs and accordions</a></li>
-                                        <li><a href="progress-bars.html">Progress Bars</a></li>
-                                        <li><a href="forms.html">Forms</a></li>
-                                        <li><a href="tables.html">Tables</a></li>
-                                        <li><a href="grid.html">Grid</a></li>
-                                        <li><a href="buttons.html">Buttons</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+
+                            <?php
+                                wp_nav_menu( array(
+                                    'theme_location'  => 'primary',
+                                    'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                                    'container'       => false,
+                                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                    'menu_class'      => 'rd-navbar-nav',
+                                ) );
+                            ?>
                         </div>
                         <!--RD Navbar Search-->
                         <div class="rd-navbar-search">
@@ -214,6 +193,18 @@ function theme_get_header()
 
 <?php
 }
+
+/**
+* Change classes to WP Submenu 
+*/
+function theme_submenu_class($menu) {
+    
+    $menu = preg_replace('/ class="sub-menu"/', '/ class="rd-navbar-dropdown" /', $menu);  
+    
+    return $menu;  
+    
+}    
+add_filter('wp_nav_menu','theme_submenu_class'); 
 
 /**
 * Add Mime Types
