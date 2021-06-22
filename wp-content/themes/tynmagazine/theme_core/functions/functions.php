@@ -18,9 +18,9 @@ function theme_setup()
 
     // Menús
     register_nav_menus( array(
-        'primary' => __( 'Primary Menu', THEME_TEXTDOMAIN ),
-        'primary_top_right' => __( 'Primary Menu (top right)', THEME_TEXTDOMAIN ),
-        'footer' => __( 'Footer Menu', THEME_TEXTDOMAIN )
+        'primary' => __( 'Menu Principal', THEME_TEXTDOMAIN ),
+        'primary_top_right' => __( 'Menu Principal (top right)', THEME_TEXTDOMAIN ),
+        'footer' => __( 'Menu Footer', THEME_TEXTDOMAIN )
     ) );
 
     // Theme support
@@ -29,7 +29,8 @@ function theme_setup()
     add_theme_support( 'responsive-embeds' );
 
 	// Tamaño de imagenes
-    add_image_size('hero_image', 1440, 900, true);
+    add_image_size('feat_big_slider', 930, 692, true);
+    add_image_size('feat_big_side', 450, 330, true);
 
 	// Stylesheet to the visual editor.
     //add_editor_style('editor-style.css');
@@ -38,44 +39,26 @@ function theme_setup()
 add_action( 'after_setup_theme', 'theme_setup' );
 
 /**
-* Load custom Jquery
+* Theme Scripts
 */
-function theme_load_custom_jquery() {
+function theme_scripts_styles() 
+{
     wp_enqueue_style( 'theme-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700', false );
     wp_enqueue_style( 'theme-bootstrap', get_template_directory_uri() . '/front/css/bootstrap.css', array(), THEME_STYLE_VERSION, 'all' );
     wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/front/css/style.css', array(), THEME_STYLE_VERSION, 'all' );
     wp_enqueue_style( 'theme-fonts', get_template_directory_uri() . '/front/css/fonts.css', array(), THEME_STYLE_VERSION, 'all' );
 
+    //Load custom jquery
     wp_deregister_script( 'jquery' ); 
     wp_register_script('jquery-custom', get_template_directory_uri() . '/front/js/jquery-2.2.4.min.js', false, '2.2.4', true);
-    wp_enqueue_script('jquery-custom'); 
+    wp_enqueue_script('jquery-custom');
+
     wp_enqueue_script('theme-core', get_template_directory_uri() . '/front/js/core.min.js', array('jquery-custom'), THEME_STYLE_VERSION, true);
     wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/front/js/script.js', array('jquery-custom'), THEME_STYLE_VERSION, true);
 
     wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/css/custom-style.css', array(), THEME_STYLE_VERSION, 'all' );
 }
-add_action('wp_enqueue_scripts', 'theme_load_custom_jquery'); 
-
-/**
-* Theme Scripts
-*/
-function theme_scripts_styles()
-{
-    
-
-    
-}
-add_action( 'enqueue_block_assets', 'theme_scripts_styles' );
-
-/**
-* Admin Scripts
-*/
-function theme_admin_scripts()
-{
-    wp_enqueue_style( 'editor-css', get_stylesheet_directory_uri() . '/editor-style.css', array(), THEME_STYLE_VERSION, 'all' );
-    wp_enqueue_script( 'editor-js', get_stylesheet_directory_uri() . '/editor-admin.js', array('jquery'), THEME_STYLE_VERSION, true );
-}
-//add_action('enqueue_block_editor_assets', 'theme_admin_scripts');
+add_action('wp_enqueue_scripts', 'theme_scripts_styles'); 
 
 /**
 * ACF JSON - Save
@@ -183,7 +166,7 @@ function theme_get_header()
                             <a class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search" href="#"><span></span></a>
                             <form id="searchform" class="rd-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET">
                                 <div class="form-wrap">
-                                    <label class="form-label form-label" for="rd-navbar-search-form-input"><?php _e( 'I\'m looking for', THEME_TEXTDOMAIN ); ?>...</label>
+                                    <label class="form-label form-label" for="rd-navbar-search-form-input"><?php _e( 'Estoy buscando', THEME_TEXTDOMAIN ); ?>...</label>
                                     <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off" value="<?php echo get_search_query(); ?>">
                                 </div>
                                 <button class="rd-search-form-submit fa-search"></button>
@@ -211,6 +194,19 @@ function theme_submenu_class($menu) {
     
 }    
 add_filter('wp_nav_menu','theme_submenu_class'); 
+
+/**
+* WP Body classes
+*/
+function theme_change_body_classes( $wp_classes ) {
+     
+    foreach($wp_classes as $key => $value) {
+        if ($value == 'page') unset($wp_classes[$key]); //  Replaces "page" and removes it
+    }
+
+    return $wp_classes;
+}
+add_filter( 'body_class', 'theme_change_body_classes' );
 
 /**
 * Add Mime Types

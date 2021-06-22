@@ -13,9 +13,9 @@ function register_acf_block_types() {
 
     $blocks = array(
         array(
-            'name'              => 'hero-image',
-            'title'             => __('Hero Image', THEME_TEXTDOMAIN),
-            'render_template'   => $path . 'hero-image_acf-fields.php',
+            'name'              => 'featured-big',
+            'title'             => __('Featured Big', THEME_TEXTDOMAIN),
+            'render_template'   => $path . 'featured_big.php',
             'icon'              => 'format-image'
         ),
     );
@@ -28,7 +28,12 @@ function register_acf_block_types() {
                 'render_template'   => $block['render_template'],
                 'icon'              => $block['icon'],
                 'category'          => 'tyn',
-                'mode'              => ($block['mode']) ? $block['mode'] : 'preview'
+                'mode'              => 'edit',
+                'post_types'        => ($block['post_types']) ? $block['post_types'] : array('page'),
+                'supports'          => array(
+                    'align'     => false,
+                    'mode'      => false,
+                )
             ));
         }
     }
@@ -36,5 +41,5 @@ function register_acf_block_types() {
 }
 
 if( function_exists('acf_register_block_type') ) {
-    //add_action('acf/init', 'register_acf_block_types');
+    add_action('acf/init', 'register_acf_block_types');
 }

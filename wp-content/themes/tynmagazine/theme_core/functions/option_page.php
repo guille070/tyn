@@ -13,14 +13,14 @@
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
-		'page_title' 	=> __('Theme General Settings', THEME_TEXTDOMAIN),
-		'menu_title'	=> __('Theme Settings', THEME_TEXTDOMAIN),
+		'page_title' 	=> __('Opciones Generales del Tema', THEME_TEXTDOMAIN),
+		'menu_title'	=> __('Opciones Generales', THEME_TEXTDOMAIN),
 		'menu_slug' 	=> 'theme-general-settings',
 		'redirect'		=> false
 	));
 	
 	acf_add_options_sub_page(array(
-		'page_title' 	=> __('Theme Footer Settings', THEME_TEXTDOMAIN),
+		'page_title' 	=> __('Opciones del Footer', THEME_TEXTDOMAIN),
 		'menu_title'	=> __('Footer', THEME_TEXTDOMAIN),
 		'parent_slug'	=> 'theme-general-settings',
 	));
