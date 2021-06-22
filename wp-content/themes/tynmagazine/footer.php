@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="range range-center range-xs-30 range-sm-0 footer-bottom-section">
-                <div class="cell-sm-6 text-sm-left"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/front/images/logo-tynmag-retina.png" width="266" alt="<?php bloginfo( 'name' ); ?>"></a>
+                <div class="cell-sm-6 text-sm-left"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/front/images/logo-tynmag-retina.png" width="266" alt="<?php bloginfo( 'name' ); ?>"></a>
                     <p class="privacy"><?php bloginfo( 'name' ); ?> &#169; <span id="copyright-year"></span>.<a href="privacy-policy.html">Privacy Policy</a>
                     </p>
                 </div>

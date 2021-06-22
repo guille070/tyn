@@ -49,7 +49,6 @@ function theme_load_custom_jquery() {
     wp_deregister_script( 'jquery' ); 
     wp_register_script('jquery-custom', get_template_directory_uri() . '/front/js/jquery-2.2.4.min.js', false, '2.2.4', true);
     wp_enqueue_script('jquery-custom'); 
-
     wp_enqueue_script('theme-core', get_template_directory_uri() . '/front/js/core.min.js', array('jquery-custom'), THEME_STYLE_VERSION, true);
     wp_enqueue_script('theme-scripts', get_template_directory_uri() . '/front/js/script.js', array('jquery-custom'), THEME_STYLE_VERSION, true);
 
@@ -145,24 +144,30 @@ function theme_get_header()
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                         <!-- RD Navbar Brand-->
                         <div class="rd-navbar-brand">
-                            <a class="brand-name" href="<?php echo home_url(); ?>">
+                            <a class="brand-name" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/front/images/logo-tynmag-retina.png" width="266"  alt="<?php bloginfo( 'name' ); ?>">
                             </a>
                         </div>
                         <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-                        <div class="rd-navbar-top-panel rd-navbar-collapse">
-                            <div class="rd-navbar-top-panel-inner">
-                                <ul class="contact-list">
-                                    <li><a href="#">Subscribe Now</a></li>
-                                    <li><a data-toggle="modal" href="#myModal">Sign In</a></li>
-                                    <li><a href="contacts.html">Contacts</a></li>
-                                </ul>
+                        
+                        <?php if ( has_nav_menu( 'primary_top_right' ) ) { ?>
+                            <div class="rd-navbar-top-panel rd-navbar-collapse">
+                                <div class="rd-navbar-top-panel-inner">
+                                
+                                    <?php wp_nav_menu( array(
+                                        'theme_location'  => 'primary_top_right',
+                                        'depth'           => 1, // 1 = no dropdowns, 2 = with dropdowns.
+                                        'container'       => false,
+                                        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                        'menu_class'      => 'contact-list',
+                                    ) ); ?>
+
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
                     </div>
                     <div class="rd-navbar-aside-right">
                         <div class="rd-navbar-nav-wrap">
-
                             <?php
                                 wp_nav_menu( array(
                                     'theme_location'  => 'primary',
@@ -176,11 +181,10 @@ function theme_get_header()
                         <!--RD Navbar Search-->
                         <div class="rd-navbar-search">
                             <a class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search" href="#"><span></span></a>
-                            <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                            <form id="searchform" class="rd-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="GET">
                                 <div class="form-wrap">
-                                    <label class="form-label form-label" for="rd-navbar-search-form-input">I`m looking for...</label>
-                                    <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
-                                    <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                                    <label class="form-label form-label" for="rd-navbar-search-form-input"><?php _e( 'I\'m looking for', THEME_TEXTDOMAIN ); ?>...</label>
+                                    <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off" value="<?php echo get_search_query(); ?>">
                                 </div>
                                 <button class="rd-search-form-submit fa-search"></button>
                             </form>
@@ -200,6 +204,8 @@ function theme_get_header()
 function theme_submenu_class($menu) {
     
     $menu = preg_replace('/ class="sub-menu"/', '/ class="rd-navbar-dropdown" /', $menu);  
+    $menu = preg_replace('/ current-menu-item /', ' active ', $menu);  
+    $menu = preg_replace('/ current-menu-parent /', ' active ', $menu);  
     
     return $menu;  
     
