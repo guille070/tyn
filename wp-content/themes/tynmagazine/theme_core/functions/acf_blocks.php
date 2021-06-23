@@ -18,6 +18,12 @@ function register_acf_block_types() {
             'render_template'   => $path . 'slider_notas_destacadas.php',
             'icon'              => 'format-image'
         ),
+        array(
+            'name'              => 'filtro-categorias',
+            'title'             => __('Filtro de Categorias', THEME_TEXTDOMAIN),
+            'render_template'   => $path . 'filtro_categorias.php',
+            'icon'              => 'format-image'
+        ),
     );
     
     if ($blocks) {
