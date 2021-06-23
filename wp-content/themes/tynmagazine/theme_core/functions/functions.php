@@ -276,5 +276,82 @@ function theme_add_unfiltered_html_cap_to_users( $caps, $cap, $user_id ) {
 }
 add_filter( 'map_meta_cap', 'theme_add_unfiltered_html_cap_to_users', 1, 3 );
 
+/**
+* Obtiene el enlace de compartir la pagina actual por Twitter
+*
+* @param int | WP_Post $post_id: Post ID del que obtener el link
+*/
+function theme_get_share_link_twitter ($post_id = null)
+{
+    $url = "";
 
+    $url = "https://twitter.com/intent/tweet?source=webclient&amp;text=" . urlencode(html_entity_decode(get_the_title($post_id). " - ". get_the_permalink($post_id), ENT_COMPAT, 'UTF-8'));
 
+    return $url;
+}
+
+/**
+* Obtiene el enlace de compartir la pagina actual por Facebook
+*
+* @param int | WP_Post $post_id: Post ID del que obtener el link
+*/
+function theme_get_share_link_facebook ($post_id = null)
+{
+    $url = "";
+
+    $url = "https://www.facebook.com/sharer.php?u=" . get_the_permalink($post_id) . "&amp;t=" . urlencode(html_entity_decode(get_the_title($post_id), ENT_COMPAT, 'UTF-8'));
+
+    return $url;
+}
+
+/**
+* Obtiene el enlace de compartir la pagina actual por Linkedin
+*
+* @param int | WP_Post $post_id: Post ID del que obtener el link
+*/
+function theme_get_share_link_linkedin ($post_id = null)
+{
+    $url = "";
+
+    $url = "https://www.linkedin.com/shareArticle?mini=true&amp;url=" . get_the_permalink($post_id) . "&amp;title=" . urlencode(html_entity_decode(get_the_title($post_id), ENT_COMPAT, 'UTF-8')) . "&amp;summary=&amp;source=" . urlencode(html_entity_decode(get_bloginfo('name'), ENT_COMPAT, 'UTF-8'));
+
+    return $url;
+}
+
+/**
+* Obtiene el enlace de compartir la pagina actual por Whatsapp
+*
+* @param int | WP_Post $post_id: Post ID del que obtener el link
+*/
+function theme_get_share_link_whatsapp ($post_id = null)
+{
+    $url = "";
+
+    $wa_domain = ( wp_is_mobile() ? 'whatsapp://' : 'https://web.whatsapp.com/' );
+
+    $url = $wa_domain . "send?text=" . urlencode(get_the_title($post_id)) . " – " . urlencode(html_entity_decode(get_the_permalink($post_id), ENT_COMPAT, 'UTF-8'));
+
+    return $url;
+}
+
+/**
+ * Share block html
+ */
+function theme_share_block($post_id) {
+
+    if ( empty($post_id) ) {
+        return;
+    }
+
+    ?>
+    <div class="share-block">
+        <div class="soc-icon">
+            <a class="icon fa-twitter" href="<?php echo theme_get_share_link_twitter($post_id); ?>" target="_blank" rel="nofollow"></a>
+            <a class="icon fa-facebook-square" href="<?php echo theme_get_share_link_facebook($post_id); ?>" target="_blank" rel="nofollow"></a>
+            <a class="icon fa-whatsapp" href="<?php echo theme_get_share_link_whatsapp($post_id); ?>" target="_blank" rel="nofollow"></a>
+            <a class="icon fa-linkedin" href="<?php echo theme_get_share_link_linkedin($post_id); ?>" target="_blank" rel="nofollow"></a>
+        </div>
+        <span class="icon fa-share-alt"></span>
+    </div>
+    <?php
+}

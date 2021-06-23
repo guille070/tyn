@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Featured Big Template.
+ * Slider y Notas destacadas Template.
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
@@ -102,9 +102,7 @@ $rel_notas_derecho = get_field('rel_notas_derecho');
                                                 <li><a href="<?php echo esc_url($author_url); ?>"><?php echo $author_name; ?></a></li>
                                                 <li><?php echo $date; ?></li>
                                             </ul>
-                                            <div class="share-block">
-                                                <div class="soc-icon"><a class="icon fa-twitter" href="#"></a><a class="icon fa-facebook-square" href="#"></a><a class="icon fa-instagram" href="#"></a><a class="icon fa-pinterest" href="#"></a><a class="icon fa-youtube-play" href="#"></a></div><span class="icon fa-share-alt"></span>
-                                            </div>
+                                            <?php echo theme_share_block($post_id); ?>
                                         </div>
                                     </div>
                                 </div>
