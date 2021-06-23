@@ -18,7 +18,7 @@ get_header();
      
     foreach ( $blocks as $block ) {
  
-        if ( 'acf/featured-big' === $block['blockName'] ) {
+        if ( 'acf/slider-notas-destacadas' === $block['blockName'] ) {
              
             //var_dump($block);
              

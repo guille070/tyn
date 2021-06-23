@@ -13,9 +13,9 @@ function register_acf_block_types() {
 
     $blocks = array(
         array(
-            'name'              => 'featured-big',
-            'title'             => __('Featured Big', THEME_TEXTDOMAIN),
-            'render_template'   => $path . 'featured_big.php',
+            'name'              => 'slider-notas-destacadas',
+            'title'             => __('Slider + Notas destacadas', THEME_TEXTDOMAIN),
+            'render_template'   => $path . 'slider_notas_destacadas.php',
             'icon'              => 'format-image'
         ),
     );

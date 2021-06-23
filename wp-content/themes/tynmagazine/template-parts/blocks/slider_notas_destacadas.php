@@ -41,15 +41,15 @@ $rel_notas_derecho = get_field('rel_notas_derecho');
                                                 $i = 0; ?>
                                                 <ul class="tag-list">
                                                     <?php foreach ($categories as $category) { ?>
-                                                        <li><a href="<?php echo get_category_link($category); ?>"><?php echo $category->name; ?></a></li>
+                                                        <li><a href="<?php echo esc_url(get_category_link($category)); ?>"><?php echo $category->name; ?></a></li>
                                                     <?php if (++$i == 2) break;
                                                     } ?>
                                                 </ul>
                                             <?php } ?>
                                             <div class="caption">
-                                                <h2 class="title"><a href="<?php echo $link; ?>"><?php echo $title; ?></a></h2>
+                                                <h2 class="title"><a href="<?php echo esc_url($link); ?>"><?php echo $title; ?></a></h2>
                                                 <ul class="meta-list">
-                                                    <li><a href="<?php echo $author_url; ?>"><?php echo $author_name; ?></a></li>
+                                                    <li><a href="<?php echo esc_url($author_url); ?>"><?php echo $author_name; ?></a></li>
                                                     <li><?php echo $date; ?></li>
                                                 </ul>
                                             </div>
@@ -90,16 +90,16 @@ $rel_notas_derecho = get_field('rel_notas_derecho');
                                         $i = 0; ?>
                                         <ul class="tag-list">
                                             <?php foreach ($categories as $category) { ?>
-                                                <li><a href="<?php echo get_category_link($category); ?>"><?php echo $category->name; ?></a></li>
+                                                <li><a href="<?php echo esc_url(get_category_link($category)); ?>"><?php echo $category->name; ?></a></li>
                                             <?php if (++$i == 2) break;
                                             } ?>
                                         </ul>
                                     <?php } ?>
                                     <div class="caption">
-                                        <h4 class="title"><a href="<?php echo $link; ?>"><?php echo $title; ?></a></h4>
+                                        <h4 class="title"><a href="<?php echo esc_url($link); ?>"><?php echo $title; ?></a></h4>
                                         <div class="bottom-block">
                                             <ul class="meta-list">
-                                                <li><a href="<?php echo $author_url; ?>"><?php echo $author_name; ?></a></li>
+                                                <li><a href="<?php echo esc_url($author_url); ?>"><?php echo $author_name; ?></a></li>
                                                 <li><?php echo $date; ?></li>
                                             </ul>
                                             <div class="share-block">

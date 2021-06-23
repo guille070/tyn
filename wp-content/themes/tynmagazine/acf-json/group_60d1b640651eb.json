@@ -1,6 +1,6 @@
 {
     "key": "group_60d1b640651eb",
-    "title": "Block: Featured Big",
+    "title": "Block: Slider y Notas destacadas",
     "fields": [
         {
             "key": "field_60d1cb24a30fa",
@@ -62,7 +62,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/featured-big"
+                "value": "acf\/slider-notas-destacadas"
             }
         ]
     ],
@@ -74,5 +74,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1624367423
+    "modified": 1624439353
 }
