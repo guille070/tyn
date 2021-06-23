@@ -31,6 +31,7 @@ function theme_setup()
 	// Tamaño de imagenes
     add_image_size('feat_big_slider', 930, 692, true);
     add_image_size('feat_big_side', 450, 330, true);
+    add_image_size('filter_category', 330, 220, true);
 
 	// Stylesheet to the visual editor.
     //add_editor_style('editor-style.css');
@@ -353,5 +354,41 @@ function theme_share_block($post_id) {
         </div>
         <span class="icon fa-share-alt"></span>
     </div>
+    <?php
+}
+
+/**
+ * Tag list html
+ */
+function theme_tag_list($categories) {
+
+    if ( empty($categories) ) {
+        return;
+    }
+
+    $i = 0;
+    ?>
+    <ul class="tag-list">
+        <?php foreach ($categories as $category) { ?>
+            <li><a href="<?php echo esc_url(get_category_link($category)); ?>"><?php echo $category->name; ?></a></li>
+        <?php if (++$i == 2) break;
+        } ?>
+    </ul>
+    <?php
+}
+
+/**
+ * Meta list html
+ */
+function theme_meta_list($author_url, $author_name, $date) {
+
+    if ( empty($author_url) && empty($author_name) && empty($date) ) {
+        return;
+    }
+    ?>
+    <ul class="meta-list">
+        <li><a href="<?php echo esc_url($author_url); ?>"><?php echo $author_name; ?></a></li>
+        <li><?php echo $date; ?></li>
+    </ul>
     <?php
 }

@@ -24,7 +24,7 @@ $rel_notas_derecho = get_field('rel_notas_derecho');
                         <div class="swiper-wrapper">
                             <?php foreach ($rel_notas_slider as $post_id) {
                                 $feat_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'feat_big_slider' );
-                                $link = get_permalink( $post_id );
+                                $permalink = get_permalink( $post_id );
                                 $title = get_the_title( $post_id );
                                 $categories = get_the_category( $post_id );
                                 $author_id = get_post_field( 'post_author', $post_id );
@@ -37,21 +37,12 @@ $rel_notas_derecho = get_field('rel_notas_derecho');
                                     <div class="swiper-slide-caption">
                                         <div class="post-type-1 post-type-1-mode">
                                             <img src="<?php echo esc_url($feat_img[0]); ?>" width="<?php echo $feat_img[1]; ?>" height="<?php echo $feat_img[2]; ?>" alt="" />
-                                            <?php if ($categories) {
-                                                $i = 0; ?>
-                                                <ul class="tag-list">
-                                                    <?php foreach ($categories as $category) { ?>
-                                                        <li><a href="<?php echo esc_url(get_category_link($category)); ?>"><?php echo $category->name; ?></a></li>
-                                                    <?php if (++$i == 2) break;
-                                                    } ?>
-                                                </ul>
-                                            <?php } ?>
+
+                                            <?php echo theme_tag_list( $categories ); ?>
+                                            
                                             <div class="caption">
-                                                <h2 class="title"><a href="<?php echo esc_url($link); ?>"><?php echo $title; ?></a></h2>
-                                                <ul class="meta-list">
-                                                    <li><a href="<?php echo esc_url($author_url); ?>"><?php echo $author_name; ?></a></li>
-                                                    <li><?php echo $date; ?></li>
-                                                </ul>
+                                                <h2 class="title"><a href="<?php echo esc_url($permalink); ?>"><?php echo $title; ?></a></h2>
+                                                <?php echo theme_meta_list( $author_url, $author_name, $date ); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -75,7 +66,7 @@ $rel_notas_derecho = get_field('rel_notas_derecho');
                     <div class="range range-center range-30">
                         <?php foreach ($rel_notas_derecho as $post_id) {
                             $feat_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'feat_big_side' );
-                            $link = get_permalink( $post_id );
+                            $permalink = get_permalink( $post_id );
                             $title = get_the_title( $post_id );
                             $categories = get_the_category( $post_id );
                             $author_id = get_post_field( 'post_author', $post_id );
@@ -86,23 +77,14 @@ $rel_notas_derecho = get_field('rel_notas_derecho');
                             <div class="cell-xs-6 cell-sm-6 cell-lg-12">
                                 <div class="post-type-1">
                                     <img src="<?php echo esc_url($feat_img[0]); ?>" width="<?php echo $feat_img[1]; ?>" height="<?php echo $feat_img[2]; ?>" alt="" />
-                                    <?php if ($categories) {
-                                        $i = 0; ?>
-                                        <ul class="tag-list">
-                                            <?php foreach ($categories as $category) { ?>
-                                                <li><a href="<?php echo esc_url(get_category_link($category)); ?>"><?php echo $category->name; ?></a></li>
-                                            <?php if (++$i == 2) break;
-                                            } ?>
-                                        </ul>
-                                    <?php } ?>
+                                    
+                                    <?php echo theme_tag_list( $categories ); ?>
+
                                     <div class="caption">
-                                        <h4 class="title"><a href="<?php echo esc_url($link); ?>"><?php echo $title; ?></a></h4>
+                                        <h4 class="title"><a href="<?php echo esc_url($permalink); ?>"><?php echo $title; ?></a></h4>
                                         <div class="bottom-block">
-                                            <ul class="meta-list">
-                                                <li><a href="<?php echo esc_url($author_url); ?>"><?php echo $author_name; ?></a></li>
-                                                <li><?php echo $date; ?></li>
-                                            </ul>
-                                            <?php echo theme_share_block($post_id); ?>
+                                            <?php echo theme_meta_list( $author_url, $author_name, $date ); ?>
+                                            <?php echo theme_share_block( $post_id ); ?>
                                         </div>
                                     </div>
                                 </div>
