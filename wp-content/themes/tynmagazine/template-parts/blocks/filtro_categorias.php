@@ -9,8 +9,12 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 
+global $post;
+
 $txt_title = get_field('txt_title');
 $rel_categorias = get_field('rel_categorias');
+
+$posts_ids_other_blocks = theme_get_posts_other_blocks( $post->post_content );
 
 ?>
 
@@ -58,6 +62,7 @@ $rel_categorias = get_field('rel_categorias');
                                     $args = array(
                                         'numberposts'   => 4,
                                         'category'      => $category_id,
+                                        'post__not_in'  => $posts_ids_other_blocks,
                                         'tax_query' => array(
                                             array(
                                                 'taxonomy' => 'subseccion',

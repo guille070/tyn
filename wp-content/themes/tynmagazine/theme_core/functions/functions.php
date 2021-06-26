@@ -128,9 +128,15 @@ function theme_get_header()
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                         <!-- RD Navbar Brand-->
                         <div class="rd-navbar-brand">
-                            <a class="brand-name" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                                <img src="<?php echo get_stylesheet_directory_uri() ?>/front/images/logo-tynmag-retina.png" width="266"  alt="<?php bloginfo( 'name' ); ?>">
-                            </a>
+                            <?php if (is_front_page()) { ?>
+                                <h1>
+                            <?php } ?>
+                                <a class="brand-name" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/front/images/logo-tynmag-retina.png" width="266"  alt="<?php bloginfo( 'name' ); ?>">
+                                </a>
+                            <?php if (is_front_page()) { ?>
+                                </h1>
+                            <?php } ?>
                         </div>
                         <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
                         
@@ -392,3 +398,73 @@ function theme_meta_list($author_url, $author_name, $date) {
     </ul>
     <?php
 }
+
+/**
+ * Get post ids from other blocks
+ */
+function theme_get_posts_other_blocks($post_content) {
+
+    if ( empty($post_content) ) {
+        return;
+    }
+
+    $blocks = parse_blocks( $post_content );
+    $post_ids = array();
+     
+    foreach ( $blocks as $block ) {
+ 
+        if ( 'acf/slider-notas-destacadas' === $block['blockName'] ) {
+
+            $rel_notas_slider = $block['attrs']['data']['rel_notas_slider'];
+            if ( !empty($rel_notas_slider) ) {
+                foreach ( $rel_notas_slider as $post_id ) {
+                    $post_ids[] = $post_id;
+                }
+            }
+
+            $rel_notas_derecho = $block['attrs']['data']['rel_notas_derecho'];
+            if ( !empty($rel_notas_derecho) ) {
+                foreach ( $rel_notas_derecho as $post_id ) {
+                    $post_ids[] = $post_id;
+                }
+            }
+             
+        }
+         
+    }
+
+    return $post_ids;
+}
+
+/**
+ * WP Columns Block: change html
+ */
+function theme_columns_block_change_html ($block_content, $block) {
+	if ( $block['blockName'] === 'core/columns' && !is_admin() && !wp_is_json_request() ) {
+		$html = '';
+
+		$html .= '<section class="bg-white section-bottom-60">' . "\n";
+		$html .= '<div class="shell">' . "\n";
+		$html .= '<div class="range range-center range-40">' . "\n";
+
+		if (isset($block['innerBlocks'])) {
+			foreach ($block['innerBlocks'] as $column) {
+                $html .= '<div class="cell- theme-wp-block-fixer" style="flex-basis: '.$column['attrs']['width'].'; max-width: '.$column['attrs']['width'].';">';
+                foreach ( $column['innerBlocks'] as $inner_block ) {
+                    $html .= render_block( $inner_block ); 
+                }
+                $html .= '</div>';
+			}
+		}
+
+		$html .= '</div>' . "\n";
+		$html .= '</div>' . "\n";
+		$html .= '</section>' . "\n";
+
+		return $html;
+	}
+
+	return $block_content;
+}
+
+add_filter('render_block', 'theme_columns_block_change_html', null, 2);

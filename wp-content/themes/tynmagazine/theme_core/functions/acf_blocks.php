@@ -34,11 +34,12 @@ function register_acf_block_types() {
                 'render_template'   => $block['render_template'],
                 'icon'              => $block['icon'],
                 'category'          => 'tyn',
-                'mode'              => 'edit',
+                'mode'              => ($block['mode']) ? $block['mode'] : 'edit',
                 'post_types'        => ($block['post_types']) ? $block['post_types'] : array('page'),
                 'supports'          => array(
                     'align'     => false,
                     'mode'      => false,
+                    'jsx'       => ($block['supports']['jsx']) ? $block['supports']['jsx'] : false,
                 )
             ));
         }
