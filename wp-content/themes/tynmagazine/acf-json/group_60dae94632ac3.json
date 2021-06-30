@@ -41,6 +41,26 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_60dcd843ef763",
+            "label": "Columnas (solamente para tabletas y escritorio)",
+            "name": "range_columnas_tablets_desktop",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 2,
+            "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -60,5 +80,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1624959391
+    "modified": 1625087422
 }

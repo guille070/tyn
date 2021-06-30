@@ -11,6 +11,7 @@
 
 $txt_title = get_field('txt_title');
 $num_noticias = get_field('num_noticias');
+$range_columnas_tablets_desktop = get_field('range_columnas_tablets_desktop');
 
 $posts_to_exclude = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ? get_post_meta( $post_id, '_post_ids_from_blocks', true ) : array();
 ?>
@@ -18,13 +19,14 @@ $posts_to_exclude = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ?
 <section class="section-xs bg-white">
     <div class="shell">
         <div class="range">
-            <div class="cell-xs-12">
-                <div class="section-title">
-                    <?php if ($txt_title) { ?>
+
+            <?php if ($txt_title) { ?>
+                <div class="cell-xs-12">
+                    <div class="section-title">
                         <h3><?php echo $txt_title; ?></h3>
-                    <?php } ?>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
 
             <?php 
             $args = array(
@@ -51,6 +53,11 @@ $posts_to_exclude = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ?
             <?php if (!empty($latest_posts)) {
 
                 $posts_ids = array();
+
+                if ($range_columnas_tablets_desktop == 2 || $range_columnas_tablets_desktop=='') $col_class = 'cell-sm-6';
+                if ($range_columnas_tablets_desktop == 3) $col_class = 'cell-sm-4';
+                if ($range_columnas_tablets_desktop == 4) $col_class = 'cell-sm-3';
+                if ($range_columnas_tablets_desktop == 5) $col_class = 'cell-sm-1-5';
                 ?>
 
                 <div class="range range-center range-30 block-grilla-noticias">
@@ -68,7 +75,7 @@ $posts_to_exclude = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ?
                         $date = get_the_date( '', $postid );
                         ?>
 
-                        <div class="cell-xs-10 cell-sm-6">
+                        <div class="cell-xs-10 <?php echo $col_class; ?>">
                             <div class="post-type-1 post-type-1-mode">
                                 <img src="<?php echo esc_url($feat_img[0]); ?>" width="<?php echo $feat_img[1]; ?>" height="<?php echo $feat_img[2]; ?>" alt="" />
                                     
