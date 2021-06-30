@@ -12,6 +12,8 @@
 $rel_notas_slider = get_field('rel_notas_slider');
 $rel_notas_derecho = get_field('rel_notas_derecho');
 
+$posts_ids_block = array_merge($rel_notas_slider, $rel_notas_derecho);
+theme_update_post_ids_from_blocks($post_id, $posts_ids_block);
 ?>
 
 <section class="section-xs bg-white">

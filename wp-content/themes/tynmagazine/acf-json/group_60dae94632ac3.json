@@ -1,9 +1,9 @@
 {
-    "key": "group_60d30379e2acf",
-    "title": "Block: Filtro de categorias",
+    "key": "group_60dae94632ac3",
+    "title": "Block: Grilla de Noticias",
     "fields": [
         {
-            "key": "field_60d3038925426",
+            "key": "field_60dae95344aa4",
             "label": "Titulo principal",
             "name": "txt_title",
             "type": "text",
@@ -22,10 +22,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_60d307cfe4b33",
-            "label": "Seleccione las categorias para el filtro",
-            "name": "rel_categorias",
-            "type": "taxonomy",
+            "key": "field_60dae97244aa5",
+            "label": "Cantidad de noticias a mostrar",
+            "name": "num_noticias",
+            "type": "number",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -34,14 +34,13 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "category",
-            "field_type": "multi_select",
-            "allow_null": 0,
-            "add_term": 0,
-            "save_terms": 0,
-            "load_terms": 0,
-            "return_format": "id",
-            "multiple": 0
+            "default_value": 4,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         }
     ],
     "location": [
@@ -49,7 +48,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/filtro-categorias"
+                "value": "acf\/grilla-noticias"
             }
         ]
     ],
@@ -61,5 +60,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1624958115
+    "modified": 1624959391
 }

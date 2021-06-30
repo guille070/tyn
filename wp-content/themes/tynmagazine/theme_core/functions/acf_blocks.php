@@ -24,6 +24,12 @@ function register_acf_block_types() {
             'render_template'   => $path . 'filtro_categorias.php',
             'icon'              => 'format-image'
         ),
+        array(
+            'name'              => 'grilla-noticias',
+            'title'             => __('Grilla de Noticias', THEME_TEXTDOMAIN),
+            'render_template'   => $path . 'grilla_noticias.php',
+            'icon'              => 'format-image'
+        ),
     );
     
     if ($blocks) {

@@ -2,9 +2,13 @@
     text-align: left;
 }
 
-@media (max-width: 992px) {
-    .theme-wp-block-fixer {
-        flex-basis: 100% !important;
-        max-width: 100% !important;
-    }
+/* WP Block Column */
+.wp-block-column .shell {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Block: Grilla noticias */
+html.lt-ie-10 * + .range, * + .range.block-grilla-noticias {
+    margin-top: 30px;
 }

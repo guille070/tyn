@@ -400,40 +400,23 @@ function theme_meta_list($author_url, $author_name, $date) {
 }
 
 /**
- * Get post ids from other blocks
+ * Update post ids from blocks
  */
-function theme_get_posts_other_blocks($post_content) {
-
-    if ( empty($post_content) ) {
+function theme_update_post_ids_from_blocks($post_id, $posts_ids_block) {
+    if ( empty($posts_ids_block) ) {
         return;
     }
-
-    $blocks = parse_blocks( $post_content );
-    $post_ids = array();
-     
-    foreach ( $blocks as $block ) {
- 
-        if ( 'acf/slider-notas-destacadas' === $block['blockName'] ) {
-
-            $rel_notas_slider = $block['attrs']['data']['rel_notas_slider'];
-            if ( !empty($rel_notas_slider) ) {
-                foreach ( $rel_notas_slider as $post_id ) {
-                    $post_ids[] = $post_id;
-                }
-            }
-
-            $rel_notas_derecho = $block['attrs']['data']['rel_notas_derecho'];
-            if ( !empty($rel_notas_derecho) ) {
-                foreach ( $rel_notas_derecho as $post_id ) {
-                    $post_ids[] = $post_id;
-                }
-            }
-             
+    
+    if ( ! add_post_meta( $post_id, '_post_ids_from_blocks', $posts_ids_block, true ) ) { 
+        $existing_ids = get_post_meta( $post_id, '_post_ids_from_blocks', true );
+        $diff = array_diff($posts_ids_block, $existing_ids);
+        
+        if (!empty($existing_ids) && !empty($diff)) {
+            $posts_ids_block = array_merge($existing_ids, $posts_ids_block);
         }
-         
-    }
 
-    return $post_ids;
+        update_post_meta ( $post_id, '_post_ids_from_blocks', $posts_ids_block );
+    }
 }
 
 /**
@@ -441,23 +424,10 @@ function theme_get_posts_other_blocks($post_content) {
  */
 function theme_columns_block_change_html ($block_content, $block) {
 	if ( $block['blockName'] === 'core/columns' && !is_admin() && !wp_is_json_request() ) {
-		$html = '';
-
-		$html .= '<section class="bg-white section-bottom-60">' . "\n";
+		
+        $html = '<section class="bg-white section-bottom-60">' . "\n";
 		$html .= '<div class="shell">' . "\n";
-		$html .= '<div class="range range-center range-40">' . "\n";
-
-		if (isset($block['innerBlocks'])) {
-			foreach ($block['innerBlocks'] as $column) {
-                $html .= '<div class="cell- theme-wp-block-fixer" style="flex-basis: '.$column['attrs']['width'].'; max-width: '.$column['attrs']['width'].';">';
-                foreach ( $column['innerBlocks'] as $inner_block ) {
-                    $html .= render_block( $inner_block ); 
-                }
-                $html .= '</div>';
-			}
-		}
-
-		$html .= '</div>' . "\n";
+        $html .= $block_content;
 		$html .= '</div>' . "\n";
 		$html .= '</section>' . "\n";
 
@@ -466,5 +436,4 @@ function theme_columns_block_change_html ($block_content, $block) {
 
 	return $block_content;
 }
-
-add_filter('render_block', 'theme_columns_block_change_html', null, 2);
+add_filter('render_block', 'theme_columns_block_change_html', 10, 2);
