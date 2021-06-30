@@ -32,7 +32,6 @@ $posts_to_exclude = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ?
             $args = array(
                 'post_type'         => 'post',
                 'posts_per_page'    => $num_noticias,
-                'fields'            => 'ids',
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'subseccion',
@@ -62,17 +61,18 @@ $posts_to_exclude = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ?
 
                 <div class="range range-center range-30 block-grilla-noticias">
 
-                    <?php foreach ( $latest_posts as $postid ) {
+                    <?php foreach ( $latest_posts as $post ) {
+                        setup_postdata( $post );
 
-                        $posts_ids[] = $postid;
-                        $feat_img = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), 'feat_big_side' );
-                        $title = get_the_title( $postid );
-                        $permalink = get_the_permalink( $postid );
-                        $categories = get_the_category( $postid );
-                        $author_id = get_post_field( 'post_author', $postid );
+                        $posts_ids[] = $post->ID;
+                        $feat_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'feat_big_side' );
+                        $title = get_the_title( $post->ID );
+                        $permalink = get_the_permalink( $post->ID );
+                        $categories = get_the_category( $post->ID );
+                        $author_id = get_post_field( 'post_author', $post->ID );
                         $author_name = get_the_author_meta( 'display_name', $author_id );
                         $author_url = get_author_posts_url( $author_id );
-                        $date = get_the_date( '', $postid );
+                        $date = get_the_date( '', $post->ID );
                         ?>
 
                         <div class="cell-xs-10 <?php echo $col_class; ?>">
@@ -85,7 +85,7 @@ $posts_to_exclude = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ?
                                     <h4 class="title"><a href="<?php echo esc_url($permalink); ?>"><?php echo $title; ?></a></h4>
                                     <div class="bottom-block">
                                         <?php echo theme_meta_list( $author_url, $author_name, $date ); ?>
-                                        <?php echo theme_share_block( $postid ); ?>
+                                        <?php echo theme_share_block( $post->ID ); ?>
                                     </div>
                                 </div>
                             </div>
