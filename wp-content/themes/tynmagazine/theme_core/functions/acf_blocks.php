@@ -30,6 +30,12 @@ function register_acf_block_types() {
             'render_template'   => $path . 'grilla_noticias.php',
             'icon'              => 'format-image'
         ),
+        array(
+            'name'              => 'newsletter-redes-sociales',
+            'title'             => __('Newsletter + Redes Sociales', THEME_TEXTDOMAIN),
+            'render_template'   => $path . 'newsletter_redes-sociales.php',
+            'icon'              => 'format-image'
+        ),
     );
     
     if ($blocks) {

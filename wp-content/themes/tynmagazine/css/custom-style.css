@@ -12,3 +12,27 @@
 html.lt-ie-10 * + .range, * + .range.block-grilla-noticias {
     margin-top: 30px;
 }
+
+/* Block: Newsletter */
+.block-form-newsletter script + style + div {
+    padding: 0 !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.block-form-newsletter .subscription-form-control {
+    text-align: left !important;
+}
+.block-form-newsletter input.subscription-form-text[name=captchaCode] {
+    width: auto !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    font-size: 13px !important;
+}
+.block-form-newsletter .subscription-form-control > img {
+    max-width: 60%;
+}
+.block-form-newsletter div.subscription-form-control > label.subscription-form-control {
+    display: inline-block !important;
+}
+.block-form-newsletter .subscription-form-feedback {
+    background-color: #f1f1f1 !important;
+}

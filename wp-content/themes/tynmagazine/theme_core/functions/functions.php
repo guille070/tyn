@@ -61,6 +61,11 @@ function theme_scripts_styles()
 }
 add_action('wp_enqueue_scripts', 'theme_scripts_styles'); 
 
+function theme_deny_list_blocks() {
+    wp_enqueue_script( 'theme-deny-list-blocks', get_template_directory_uri() . '/js/theme.js', array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), THEME_STYLE_VERSION );
+}
+add_action( 'enqueue_block_editor_assets', 'theme_deny_list_blocks' );
+
 /**
 * ACF JSON - Save
 */

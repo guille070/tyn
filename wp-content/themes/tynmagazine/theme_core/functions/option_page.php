@@ -18,9 +18,21 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_slug' 	=> 'theme-general-settings',
 		'redirect'		=> false
 	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> __('Newsletter', THEME_TEXTDOMAIN),
+		'menu_title'	=> __('Newsletter', THEME_TEXTDOMAIN),
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> __('Redes Sociales', THEME_TEXTDOMAIN),
+		'menu_title'	=> __('Redes Sociales', THEME_TEXTDOMAIN),
+		'parent_slug'	=> 'theme-general-settings',
+	));
 	
 	acf_add_options_sub_page(array(
-		'page_title' 	=> __('Opciones del Footer', THEME_TEXTDOMAIN),
+		'page_title' 	=> __('Footer', THEME_TEXTDOMAIN),
 		'menu_title'	=> __('Footer', THEME_TEXTDOMAIN),
 		'parent_slug'	=> 'theme-general-settings',
 	));
@@ -30,6 +42,8 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> __('Scripts', THEME_TEXTDOMAIN),
 		'parent_slug'	=> 'theme-general-settings',
 	));
+
+	
 	
 }
 ?>

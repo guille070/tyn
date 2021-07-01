@@ -1,6 +1,6 @@
 {
     "key": "group_5f0f4997eb608",
-    "title": "Theme Options Scripts",
+    "title": "Opciones Generales: Scripts",
     "fields": [
         {
             "key": "field_5f0f49ac90b05",
@@ -60,5 +60,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1624274294
+    "modified": 1625142364
 }
