@@ -68,7 +68,7 @@
         },
         {
             "key": "field_60dcd843ef763",
-            "label": "Columnas (solamente para tabletas y escritorio, mínimo 2 y máximo 5)",
+            "label": "Columnas (solamente para tabletas y escritorio, mínimo 1 y máximo 5)",
             "name": "range_columnas_tablets_desktop",
             "type": "range",
             "instructions": "",
@@ -88,7 +88,7 @@
                 "id": ""
             },
             "default_value": 2,
-            "min": 2,
+            "min": 1,
             "max": 5,
             "step": "",
             "prepend": "",
@@ -96,7 +96,7 @@
         },
         {
             "key": "field_60df1f6bd6ca4",
-            "label": "Columnas (solamente para tabletas y escritorio, mínimo 2 y máximo 3)",
+            "label": "Columnas (solamente para tabletas y escritorio, mínimo 1 y máximo 3)",
             "name": "range_columnas_tablets_desktop_img_small",
             "type": "range",
             "instructions": "",
@@ -116,7 +116,7 @@
                 "id": ""
             },
             "default_value": 2,
-            "min": 2,
+            "min": 1,
             "max": 3,
             "step": "",
             "prepend": "",
@@ -140,5 +140,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625235357
+    "modified": 1625250373
 }

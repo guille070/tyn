@@ -57,12 +57,14 @@ $posts_to_exclude = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ?
                 $col_class = '6'; // 2 cols & default
                 
                 if ($rad_diseno == 'img_back') {
+                    if ($range_columnas_tablets_desktop == 1) $col_class = '12';
                     if ($range_columnas_tablets_desktop == 3) $col_class = '4';
                     if ($range_columnas_tablets_desktop == 4) $col_class = '3';
                     if ($range_columnas_tablets_desktop == 5) $col_class = '1-5';
 
                     $html_range_classes = 'range-center range-30';
                 } else {
+                    if ($range_columnas_tablets_desktop_img_small == 1) $col_class = '12';
                     if ($range_columnas_tablets_desktop_img_small == 3) $col_class = '4';
 
                     $html_range_classes = 'range-20';
