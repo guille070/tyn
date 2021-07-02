@@ -22,19 +22,25 @@ function register_acf_block_types() {
             'name'              => 'filtro-categorias',
             'title'             => __('Filtro de Categorias', THEME_TEXTDOMAIN),
             'render_template'   => $path . 'filtro_categorias.php',
-            'icon'              => 'format-image'
+            'icon'              => 'filter'
         ),
         array(
             'name'              => 'grilla-noticias',
             'title'             => __('Grilla de Noticias', THEME_TEXTDOMAIN),
             'render_template'   => $path . 'grilla_noticias.php',
-            'icon'              => 'format-image'
+            'icon'              => 'grid-view'
         ),
         array(
             'name'              => 'newsletter-redes-sociales',
             'title'             => __('Newsletter + Redes Sociales', THEME_TEXTDOMAIN),
             'render_template'   => $path . 'newsletter_redes-sociales.php',
-            'icon'              => 'format-image'
+            'icon'              => 'networking'
+        ),
+        array(
+            'name'              => 'listado-noticias',
+            'title'             => __('Listado de Noticias', THEME_TEXTDOMAIN),
+            'render_template'   => $path . 'listado_noticias.php',
+            'icon'              => 'list-view'
         ),
     );
     

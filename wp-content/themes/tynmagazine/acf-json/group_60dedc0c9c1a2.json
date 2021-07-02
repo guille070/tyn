@@ -1,0 +1,130 @@
+{
+    "key": "group_60dedc0c9c1a2",
+    "title": "Block: Listado de Noticias",
+    "fields": [
+        {
+            "key": "field_60dedc29fc9a6",
+            "label": "Titulo",
+            "name": "txt_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60dedccf3913f",
+            "label": "Selección Automática o Manual",
+            "name": "rad_feed",
+            "type": "radio",
+            "instructions": "Si la selección es Automática se mostrarán las últimas noticias publicadas (a excepción de aquellas que ya estén seleccionadas en otro bloque de contenido de la misma página).\r\nEn caso de seleccionar Manual se deberán elegir las noticias manualmente.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "auto": "Automática",
+                "manual": "Manual"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "auto",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_60dedc5661a0c",
+            "label": "Cantidad de noticias a mostrar",
+            "name": "num_noticias",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60dedccf3913f",
+                        "operator": "==",
+                        "value": "auto"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_60dede680ec38",
+            "label": "Selección de noticias",
+            "name": "rel_noticias",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60dedccf3913f",
+                        "operator": "==",
+                        "value": "manual"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": "",
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/listado-noticias"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1625219611
+}
