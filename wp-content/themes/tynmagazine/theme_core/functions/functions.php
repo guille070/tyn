@@ -61,6 +61,9 @@ function theme_scripts_styles()
 }
 add_action('wp_enqueue_scripts', 'theme_scripts_styles'); 
 
+/**
+* Gutenberg: deny list blocks
+*/
 function theme_deny_list_blocks() {
     wp_enqueue_script( 'theme-deny-list-blocks', get_template_directory_uri() . '/js/theme.js', array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), THEME_STYLE_VERSION );
 }
@@ -358,8 +361,8 @@ function theme_share_block($post_id) {
     ?>
     <div class="share-block">
         <div class="soc-icon">
-            <a class="icon fa-twitter" href="<?php echo theme_get_share_link_twitter($post_id); ?>" target="_blank" rel="nofollow"></a>
             <a class="icon fa-facebook-square" href="<?php echo theme_get_share_link_facebook($post_id); ?>" target="_blank" rel="nofollow"></a>
+            <a class="icon fa-twitter" href="<?php echo theme_get_share_link_twitter($post_id); ?>" target="_blank" rel="nofollow"></a>
             <a class="icon fa-whatsapp" href="<?php echo theme_get_share_link_whatsapp($post_id); ?>" target="_blank" rel="nofollow"></a>
             <a class="icon fa-linkedin" href="<?php echo theme_get_share_link_linkedin($post_id); ?>" target="_blank" rel="nofollow"></a>
         </div>
