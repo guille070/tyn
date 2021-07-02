@@ -2,6 +2,10 @@
     text-align: left;
 }
 
+.meta-list li:after {
+    content: ' - ';
+}
+
 /* WP Block Column */
 .wp-block-column .shell {
     padding-left: 0;
