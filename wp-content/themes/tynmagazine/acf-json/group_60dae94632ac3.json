@@ -43,13 +43,45 @@
             "step": ""
         },
         {
+            "key": "field_60df12c433f52",
+            "label": "Diseño",
+            "name": "rad_diseno",
+            "type": "radio",
+            "instructions": "Seleccionar la opción de diseño del bloque",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "img_back": "Grilla con imágenes de fondo",
+                "img_small": "Grilla con imágenes pequeñas"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "img_back",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_60dcd843ef763",
-            "label": "Columnas (solamente para tabletas y escritorio)",
+            "label": "Columnas (solamente para tabletas y escritorio, mínimo 2 y máximo 5)",
             "name": "range_columnas_tablets_desktop",
             "type": "range",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60df12c433f52",
+                        "operator": "==",
+                        "value": "img_back"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -58,6 +90,34 @@
             "default_value": 2,
             "min": 2,
             "max": 5,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_60df1f6bd6ca4",
+            "label": "Columnas (solamente para tabletas y escritorio, mínimo 2 y máximo 3)",
+            "name": "range_columnas_tablets_desktop_img_small",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60df12c433f52",
+                        "operator": "==",
+                        "value": "img_small"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 2,
+            "max": 3,
             "step": "",
             "prepend": "",
             "append": ""
@@ -80,5 +140,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625087422
+    "modified": 1625235357
 }

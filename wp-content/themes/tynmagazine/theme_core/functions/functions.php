@@ -32,6 +32,7 @@ function theme_setup()
     add_image_size('feat_big_slider', 930, 692, true);
     add_image_size('feat_big_side', 450, 330, true);
     add_image_size('filter_category', 330, 220, true);
+    add_image_size('grid_small', 158, 158, true);
 
 	// Stylesheet to the visual editor.
     //add_editor_style('editor-style.css');
