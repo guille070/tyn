@@ -1,12 +1,12 @@
 {
-    "key": "group_60ddb466d2fee",
-    "title": "Opciones Generales: Newsletter",
+    "key": "group_60e3446c47720",
+    "title": "Opciones Generales: Footer",
     "fields": [
         {
-            "key": "field_60ddb4fc8cf0c",
-            "label": "",
+            "key": "field_60e3456450f01",
+            "label": "Quienes Somos",
             "name": "",
-            "type": "message",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,14 +15,13 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Estos campos aparecerán por defecto en el bloque \"Newsletter + Redes Sociales\" cuando el newsletter esté visible en la página.",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "key": "field_60ddb48983f6a",
-            "label": "Título",
-            "name": "txt_titulo_newsletter",
+            "key": "field_60e3457450f02",
+            "label": "Titulo",
+            "name": "txt_title_footer",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -39,9 +38,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_60ddb49a83f6b",
-            "label": "Bajada",
-            "name": "wysiwyg_bajada_newsletter",
+            "key": "field_60e3447d43164",
+            "label": "Contenido",
+            "name": "wysiwyg_footer",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -56,25 +55,6 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
-        },
-        {
-            "key": "field_60e340ae11645",
-            "label": "Script EnvialoSimple",
-            "name": "txa_script_newsletter",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 3,
-            "new_lines": ""
         }
     ],
     "location": [
@@ -82,7 +62,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-newsletter"
+                "value": "acf-options-footer"
             }
         ]
     ],
@@ -94,5 +74,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625506068
+    "modified": 1625507202
 }

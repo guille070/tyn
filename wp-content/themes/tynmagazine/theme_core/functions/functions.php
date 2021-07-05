@@ -20,7 +20,8 @@ function theme_setup()
     register_nav_menus( array(
         'primary' => __( 'Menu Principal', THEME_TEXTDOMAIN ),
         'primary_top_right' => __( 'Menu Principal (top right)', THEME_TEXTDOMAIN ),
-        'footer' => __( 'Menu Footer', THEME_TEXTDOMAIN )
+        'footer_1' => __( 'Menu Footer 1', THEME_TEXTDOMAIN ),
+        'footer_2' => __( 'Menu Footer 2', THEME_TEXTDOMAIN )
     ) );
 
     // Theme support
@@ -123,8 +124,10 @@ function theme_options_scripts_footer(){
 /**
 * Theme Header
 */
-function theme_get_header() 
-{ ?>
+function theme_get_header() {
+    $img_logo = get_field('img_logo', 'option');
+    $logo_url = ($img_logo['url']) ? $img_logo['url'] : get_stylesheet_directory_uri() . '/front/images/logo-tynmag-retina.png';
+    ?>
 
     <header class="page-header header-home-1">
         <!-- RD Navbar-->
@@ -141,7 +144,7 @@ function theme_get_header()
                                 <h1>
                             <?php } ?>
                                 <a class="brand-name" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/front/images/logo-tynmag-retina.png" width="266"  alt="<?php bloginfo( 'name' ); ?>">
+                                    <img src="<?php echo $logo_url; ?>" width="266"  alt="<?php bloginfo( 'name' ); ?>">
                                 </a>
                             <?php if (is_front_page()) { ?>
                                 </h1>

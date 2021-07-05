@@ -21,6 +21,7 @@ $mostrar_redes_sociales = get_field('bool_mostrar_redes_sociales');
                 <?php if ($mostrar_form_newsletter) {
                     $txt_newsletter = get_field('txt_titulo_newsletter', 'option');
                     $bajada_newsletter = get_field('wysiwyg_bajada_newsletter', 'option');
+                    $script_newsletter = get_field('txa_script_newsletter', 'option');
                     ?> 
 
                     <?php if ($txt_newsletter!=='') { ?>
@@ -30,7 +31,7 @@ $mostrar_redes_sociales = get_field('bool_mostrar_redes_sociales');
                         echo $bajada_newsletter;
                     } ?>
 
-                    <script type="text/javascript" src="https://v3.envialosimple.com/form/renderwidget/format/widget/AdministratorID/52552/FormID/4/Lang/es"></script>
+                    <?php echo $script_newsletter; ?>
                 <?php } ?>
             </div>
             
