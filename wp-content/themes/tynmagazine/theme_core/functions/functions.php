@@ -437,7 +437,7 @@ function theme_update_post_ids_from_blocks($post_id, $posts_ids_block) {
 function theme_columns_block_change_html ($block_content, $block) {
 	if ( $block['blockName'] === 'core/columns' && !is_admin() && !wp_is_json_request() ) {
 		
-        $html = '<section class="bg-white section-bottom-60">' . "\n";
+        $html = '<section class="bg-white">' . "\n";
 		$html .= '<div class="shell">' . "\n";
         $html .= $block_content;
 		$html .= '</div>' . "\n";

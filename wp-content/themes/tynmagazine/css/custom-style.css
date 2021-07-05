@@ -11,6 +11,11 @@
     padding-left: 0;
     padding-right: 0;
 }
+@media (min-width: 992px) {
+    .section-left-sidebar .section-xs:nth-child(1) {
+        padding-top: 0;
+    }
+}
 
 /* Block: Grilla noticias */
 html.lt-ie-10 * + .range, * + .range.block-grilla-noticias {
