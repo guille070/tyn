@@ -42,6 +42,12 @@ function register_acf_block_types() {
             'render_template'   => $path . 'listado_noticias.php',
             'icon'              => 'list-view'
         ),
+        array(
+            'name'              => 'pr-newswire-widget',
+            'title'             => __('PR Newswire', THEME_TEXTDOMAIN),
+            'render_template'   => $path . 'pr_newswire.php',
+            'icon'              => 'list-view'
+        ),
     );
     
     if ($blocks) {

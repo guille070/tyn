@@ -114,6 +114,41 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_60e34beab462f",
+            "label": "PR Newswire",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60e34bf3b4630",
+            "label": "Script",
+            "name": "txa_script_prnewswire",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
         }
     ],
     "location": [
@@ -133,5 +168,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625505266
+    "modified": 1625508895
 }
