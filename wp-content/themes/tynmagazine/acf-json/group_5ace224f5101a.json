@@ -43,6 +43,40 @@
             "mime_types": ""
         },
         {
+            "key": "field_60e41fcdfb047",
+            "label": "Publicaciones",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60e41f90fb046",
+            "label": "Seleccione el usuario para las notas 'Sin firma'",
+            "name": "post_user_default",
+            "type": "user",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "array"
+        },
+        {
             "key": "field_607f400a8d407",
             "label": "Nota patrocinada - Footer",
             "name": "",
@@ -168,5 +202,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625508895
+    "modified": 1625563163
 }

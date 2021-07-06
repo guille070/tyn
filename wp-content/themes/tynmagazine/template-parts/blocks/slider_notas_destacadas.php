@@ -29,9 +29,9 @@ theme_update_post_ids_from_blocks($post_id, $posts_ids_block);
                                 $permalink = get_permalink( $post_id );
                                 $title = get_the_title( $post_id );
                                 $categories = get_the_category( $post_id );
-                                $author_id = get_post_field( 'post_author', $post_id );
-                                $author_name = get_the_author_meta( 'display_name', $author_id );
-                                $author_url = get_author_posts_url( $author_id );
+                                $signature = theme_get_post_signature( $post_id );
+                                $author_name = $signature['name'];
+                                $author_url = $signature['url'];
                                 $date = get_the_date( '', $post_id );
                                 ?>
 
@@ -71,9 +71,9 @@ theme_update_post_ids_from_blocks($post_id, $posts_ids_block);
                             $permalink = get_permalink( $post_id );
                             $title = get_the_title( $post_id );
                             $categories = get_the_category( $post_id );
-                            $author_id = get_post_field( 'post_author', $post_id );
-                            $author_name = get_the_author_meta( 'display_name', $author_id );
-                            $author_url = get_author_posts_url( $author_id );
+                            $signature = theme_get_post_signature( $post_id );
+                            $author_name = $signature['name'];
+                            $author_url = $signature['url'];
                             $date = get_the_date( '', $post_id );
                             ?>
                             <div class="cell-xs-6 cell-sm-6 cell-lg-12">

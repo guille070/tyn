@@ -57,9 +57,9 @@ $term_img = get_field('img_patrocinador', $term);
 
                         $title = get_the_title( $post->ID );
                         $permalink = get_the_permalink( $post->ID );
-                        $author_id = get_post_field( 'post_author', $post->ID );
-                        $author_name = get_the_author_meta( 'display_name', $author_id );
-                        $author_url = get_author_posts_url( $author_id );
+                        $signature = theme_get_post_signature( $post->ID );
+                        $author_name = $signature['name'];
+                        $author_url = $signature['url'];
                         $date = get_the_date( '', $post->ID );
                         ?>
 

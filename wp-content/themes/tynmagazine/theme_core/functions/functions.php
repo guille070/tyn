@@ -376,6 +376,29 @@ function theme_share_block($post_id) {
 }
 
 /**
+ * Get post Signature meta
+ */
+function theme_get_post_signature( $post_id ) {
+    if ( empty($post_id) ) {
+        return;
+    }
+
+    $author_data = array();
+    $post_signature = get_post_meta($post_id, 'post_signature', true );
+
+    if ($post_signature == 0) {
+        $author_id = (get_field('post_user_default', 'option')['ID']) ? get_field('post_user_default', 'option')['ID'] : 42;
+    } else {
+        $author_id = get_post_field( 'post_author', $post_id );
+    }
+
+    $author_data['name'] = get_the_author_meta( 'display_name', $author_id );
+    $author_data['url'] = get_author_posts_url( $author_id );
+
+    return $author_data;
+}
+
+/**
  * Tag list html
  */
 function theme_tag_list($categories) {
