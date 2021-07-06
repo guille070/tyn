@@ -1,6 +1,6 @@
 {
     "key": "group_5f9087ebea538",
-    "title": "Campos adicionales - Subsección",
+    "title": "Subsección - Campos adicionales",
     "fields": [
         {
             "key": "field_5f908833ecc40",
@@ -16,7 +16,7 @@
                 "id": ""
             },
             "return_format": "array",
-            "preview_size": "thumbnail",
+            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -44,5 +44,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1624274308
+    "modified": 1625520652
 }

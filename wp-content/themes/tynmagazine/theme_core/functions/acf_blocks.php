@@ -48,6 +48,12 @@ function register_acf_block_types() {
             'render_template'   => $path . 'pr_newswire.php',
             'icon'              => 'list-view'
         ),
+        array(
+            'name'              => 'espacio-patrocinado',
+            'title'             => __('Espacio Patrocinado', THEME_TEXTDOMAIN),
+            'render_template'   => $path . 'espacio_patrocinado.php',
+            'icon'              => 'list-view'
+        ),
     );
     
     if ($blocks) {
