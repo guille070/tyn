@@ -15,7 +15,7 @@ $range_columnas_tablets_desktop = get_field('range_columnas_tablets_desktop');
 $range_columnas_tablets_desktop_img_small = get_field('range_columnas_tablets_desktop_img_small');
 $rad_diseno = get_field('rad_diseno');
 
-$posts_to_exclude = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ? get_post_meta( $post_id, '_post_ids_from_blocks', true ) : array();
+$posts_to_exclude = theme_get_post_ids_from_blocks($post_id);
 ?>
 
 <section class="section-xs">

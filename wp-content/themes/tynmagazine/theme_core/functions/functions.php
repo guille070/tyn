@@ -432,6 +432,19 @@ function theme_update_post_ids_from_blocks($post_id, $posts_ids_block) {
 }
 
 /**
+ * Get post ids from blocks
+ */
+function theme_get_post_ids_from_blocks($post_id) {
+    if ( empty($post_id) ) {
+        return;
+    }
+
+    $meta = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ? get_post_meta( $post_id, '_post_ids_from_blocks', true ) : array();
+
+    return $meta;
+}
+
+/**
  * WP Columns Block: change html
  */
 function theme_columns_block_change_html ($block_content, $block) {

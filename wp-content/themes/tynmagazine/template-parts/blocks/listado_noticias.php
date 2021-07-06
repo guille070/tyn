@@ -14,7 +14,7 @@ $num_noticias = get_field('num_noticias');
 $rad_feed = get_field('rad_feed');
 $rel_noticias = get_field('rel_noticias');
 
-$posts_to_exclude = (get_post_meta( $post_id, '_post_ids_from_blocks', true )) ? get_post_meta( $post_id, '_post_ids_from_blocks', true ) : array();
+$posts_to_exclude = theme_get_post_ids_from_blocks($post_id);
 ?>
 
 <section class="section-xs">
