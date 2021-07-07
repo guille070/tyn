@@ -127,6 +127,8 @@ function theme_options_scripts_footer(){
 function theme_get_header() {
     $img_logo = get_field('img_logo', 'option');
     $logo_url = ($img_logo['url']) ? $img_logo['url'] : get_stylesheet_directory_uri() . '/front/images/logo-tynmag-retina.png';
+    $header_banner_desktop = do_shortcode( "[banner group='header-728x90']" );
+    $header_banner_movil = do_shortcode( "[banner group='header-300x90']" );
     ?>
 
     <header class="page-header header-home-1">
@@ -196,6 +198,23 @@ function theme_get_header() {
             </nav>
         </div>
     </header>
+    
+    <?php if ($header_banner_desktop!=='' || $header_banner_movil!=='') { ?>
+        <section class="section-xs header-banner">
+            <div class="shell">
+                <div class="range range-center">
+                    <div class="cell-sm-12">
+                        <div class="hidden-xs">
+                            <?php echo $header_banner_desktop; ?>
+                        </div>
+                        <div class="visible-xs">
+                            <?php echo $header_banner_movil; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php } ?>
 
 <?php
 }

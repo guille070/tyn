@@ -54,6 +54,12 @@ function register_acf_block_types() {
             'render_template'   => $path . 'espacio_patrocinado.php',
             'icon'              => 'list-view'
         ),
+        array(
+            'name'              => 'banners',
+            'title'             => __('Banners', THEME_TEXTDOMAIN),
+            'render_template'   => $path . 'banners.php',
+            'icon'              => 'format-gallery'
+        ),
     );
     
     if ($blocks) {
