@@ -623,36 +623,3 @@ function theme_related_posts($post_id) {
         </div>
     <?php }
 }
-
-/**
- * Latest posts
- */
-function theme_latest_posts($post_id) {
-    $latest_posts = get_posts( 
-        array( 
-            'numberposts' => 5, 
-            'post__not_in' => array($post_id) 
-        )
-    );
-
-    if( $latest_posts ) { ?>
-
-        <div class="section-title">
-            <h3>Ultimas noticias</h3>
-        </div>
-
-        <ul class="post-list">
-            <?php foreach( $latest_posts as $post ) {
-                setup_postdata($post);
-
-                $title = get_the_title($post->ID);
-                $permalink = get_the_permalink($post->ID);
-                ?>
-
-                <li><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></li>
-
-            <?php }
-            wp_reset_postdata(); ?>
-        </ul>
-    <?php }
-}

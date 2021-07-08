@@ -87,9 +87,6 @@ $shortcode_banners = do_shortcode( "[banner group='notas-300x250']" );
                                 ?>
                             </div>
                         </div>
-                        <div class="cell-sm-6 cell-md-12">
-                            <?php //echo theme_latest_posts($post->ID); ?> 
-                        </div>
                         <?php if ( $shortcode_banners!=='' ) { ?>
                             <div class="cell-sm-6 cell-md-12">
                                 <?php echo $shortcode_banners; ?>
