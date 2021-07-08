@@ -23,6 +23,26 @@
             "load_terms": 0,
             "return_format": "id",
             "multiple": 0
+        },
+        {
+            "key": "field_60e6d75d70480",
+            "label": "Cantidad de banners a mostrar",
+            "name": "range_banners",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 6,
+            "min": 1,
+            "max": 8,
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -42,5 +62,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625682968
+    "modified": 1625741193
 }

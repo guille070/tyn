@@ -10,8 +10,9 @@
  */
 
 $sel_banner_group = get_field('sel_banner_group');
+$range_banners = get_field('range_banners');
 $banner_group_term_slug = get_term($sel_banner_group)->slug;
-$shortcode = do_shortcode( "[banner group='.$banner_group_term_slug.']" );
+$shortcode = do_shortcode( "[banner group='.$banner_group_term_slug.' count=$range_banners]" );
 
 if ( $shortcode!== '' ) {
 ?>
