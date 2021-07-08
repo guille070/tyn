@@ -34,6 +34,7 @@ function theme_setup()
     add_image_size('feat_big_side', 450, 330, true);
     add_image_size('filter_category', 330, 220, true);
     add_image_size('grid_small', 158, 158, true);
+    add_image_size('feat_post', 930, 99999, false);
 
 	// Stylesheet to the visual editor.
     //add_editor_style('editor-style.css');
@@ -42,11 +43,20 @@ function theme_setup()
 add_action( 'after_setup_theme', 'theme_setup' );
 
 /**
+* Google fonts
+*/
+function theme_google_fonts() { ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<?php }
+add_action('wp_head', 'theme_google_fonts', 0);
+
+/**
 * Theme Scripts
 */
 function theme_scripts_styles() 
 {
-    wp_enqueue_style( 'theme-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700', false );
     wp_enqueue_style( 'theme-bootstrap', get_template_directory_uri() . '/front/css/bootstrap.css', array(), THEME_STYLE_VERSION, 'all' );
     wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/front/css/style.css', array(), THEME_STYLE_VERSION, 'all' );
     wp_enqueue_style( 'theme-fonts', get_template_directory_uri() . '/front/css/fonts.css', array(), THEME_STYLE_VERSION, 'all' );
@@ -226,7 +236,7 @@ function theme_submenu_class($menu) {
     
     $menu = preg_replace('/ class="sub-menu"/', '/ class="rd-navbar-dropdown" /', $menu);  
     $menu = preg_replace('/ current-menu-item /', ' active ', $menu);  
-    $menu = preg_replace('/ current-menu-parent /', ' active ', $menu);  
+    //$menu = preg_replace('/ current-menu-parent /', ' active ', $menu);  
     
     return $menu;  
     
@@ -428,10 +438,11 @@ function theme_tag_list($categories) {
 
     $i = 0;
     ?>
+
     <ul class="tag-list">
         <?php foreach ($categories as $category) { ?>
             <li><a href="<?php echo esc_url(get_category_link($category)); ?>"><?php echo $category->name; ?></a></li>
-        <?php if (++$i == 2) break;
+        <?php if (!is_single() && ++$i == 2) break;
         } ?>
     </ul>
     <?php
@@ -445,11 +456,68 @@ function theme_meta_list($author_url, $author_name, $date) {
     if ( empty($author_url) && empty($author_name) && empty($date) ) {
         return;
     }
+
+    $pre_txt = (is_single()) ? 'Por' : '';
     ?>
+
     <ul class="meta-list">
-        <li><a href="<?php echo esc_url($author_url); ?>"><?php echo $author_name; ?></a></li>
+        <li><?php echo $pre_txt . ' '; ?><a href="<?php echo esc_url($author_url); ?>"><?php echo $author_name; ?></a></li>
         <li><?php echo $date; ?></li>
     </ul>
+    <?php
+}
+
+/**
+ * Newsletter html
+ */
+function theme_newsletter_html() {
+    $txt_newsletter = get_field('txt_titulo_newsletter', 'option');
+    $bajada_newsletter = get_field('wysiwyg_bajada_newsletter', 'option');
+    $script_newsletter = get_field('txa_script_newsletter', 'option');
+    ?>
+    
+    <div class="block-form-newsletter">
+        <?php 
+        if ($txt_newsletter!=='') echo '<h3>' . $txt_newsletter . '</h3>';
+        if ($bajada_newsletter!=='') echo $bajada_newsletter;
+        
+        echo $script_newsletter;
+        ?>
+    </div>
+
+    <?php
+}
+
+/**
+ * Redes sociales html
+ */
+function theme_redessociales_html() {
+    $txt_redes = get_field('txt_titulo_redes_sociales', 'option');
+    $bajada_redes = get_field('wysiwyg_bajada_redes_sociales', 'option');
+    $rep_redes_sociales = 'rep_redes_sociales';
+    ?>
+
+    <div class="section-subscribe">
+
+        <?php 
+        if ($txt_redes!=='') echo '<h3>' . $txt_redes . '</h3>';
+        if ($bajada_redes!=='') echo $bajada_redes;
+        
+        if ( have_rows($rep_redes_sociales, 'option') ) { ?>
+            <div class="soc-icon">
+                <?php while( have_rows($rep_redes_sociales, 'option') ): the_row();
+                    $type = get_sub_field('sel_red_social');
+                    $url = get_sub_field('txt_url_red_social');
+                    ?>
+
+                    <a class="icon <?php echo $type; ?>" href="<?php echo $url; ?>" target="_blank" rel="nofollow"></a>
+
+                <?php endwhile; ?>
+            </div>
+        <?php } ?>
+
+    </div>
+
     <?php
 }
 
@@ -504,3 +572,87 @@ function theme_columns_block_change_html ($block_content, $block) {
 	return $block_content;
 }
 add_filter('render_block', 'theme_columns_block_change_html', 10, 2);
+
+/**
+ * Related posts
+ */
+function theme_related_posts($post_id) {
+    $related_posts = get_posts( 
+        array( 
+            'category__in' => wp_get_post_categories($post_id), 
+            'numberposts' => 3, 
+            'post__not_in' => array($post_id) 
+        )
+    );
+
+    if( $related_posts ) { ?>
+
+        <div class="range rel-posts">
+            <div class="cell-xs-12">
+                <div class="section-title">
+                    <h3>Notas Relacionadas</h3>
+                </div>
+            </div>
+
+            <?php foreach( $related_posts as $post ) {
+                setup_postdata($post);
+
+                $feat_img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'filter_category' );
+                $categories = get_the_category($post->ID);
+                $title = get_the_title($post->ID);
+                $permalink = get_the_permalink($post->ID);
+                ?>
+                
+                <div class="cell-xs-10 cell-sm-4 elem-item">
+                    <div class="post-type-2">
+                        <div class="img-block">
+                            <a href="<?php echo esc_url($permalink); ?>">
+                                <img src="<?php echo esc_url($feat_img[0]); ?>" width="<?php echo $feat_img[1]; ?>" height="<?php echo $feat_img[2]; ?>" alt="" />
+                            </a>
+                            
+                            <?php echo theme_tag_list( $categories ); ?>
+                        </div>
+                        <div class="caption">
+                            <h5><a href="<?php echo esc_url($permalink); ?>"><?php echo $title; ?></a></h5>
+                        </div>
+                    </div>
+                </div>
+
+            <?php }
+            wp_reset_postdata(); ?>
+        </div>
+    <?php }
+}
+
+/**
+ * Latest posts
+ */
+function theme_latest_posts($post_id) {
+    $latest_posts = get_posts( 
+        array( 
+            'numberposts' => 5, 
+            'post__not_in' => array($post_id) 
+        )
+    );
+
+    if( $latest_posts ) { ?>
+
+        <div class="section-title">
+            <h3>Ultimas noticias</h3>
+        </div>
+
+        <ul class="post-list">
+            <?php foreach( $latest_posts as $post ) {
+                setup_postdata($post);
+
+                $title = get_the_title($post->ID);
+                $permalink = get_the_permalink($post->ID);
+                ?>
+
+                <li><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></li>
+
+            <?php }
+            wp_reset_postdata(); ?>
+        </ul>
+    <?php }
+}

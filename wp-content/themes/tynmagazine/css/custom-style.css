@@ -47,3 +47,7 @@ html.lt-ie-10 * + .range, * + .range.block-grilla-noticias {
 .block-form-newsletter .subscription-form-feedback {
     background-color: #f1f1f1 !important;
 }
+
+.rel-posts .elem-item {
+    margin-top: 30px;
+}
