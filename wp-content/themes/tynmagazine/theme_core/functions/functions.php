@@ -623,3 +623,39 @@ function theme_related_posts($post_id) {
         </div>
     <?php }
 }
+
+/**
+ * Get Breadcrumbs (Yoast SEO)
+ */
+function theme_add_breadcrumbs() {
+    if ( function_exists('yoast_breadcrumb') ) {
+        yoast_breadcrumb();
+    }
+}
+
+/**
+ * Yoast Breadcrumbs: Output wrapper
+ */
+add_filter( 'wpseo_breadcrumb_output_wrapper', 'theme_breadcrumb_output_wrapper', 10, 1 );
+function theme_breadcrumb_output_wrapper( $wrapper ) {
+    $wrapper = 'ul';
+    return $wrapper;
+}
+
+/**
+ * Yoast Breadcrumbs: Output class
+ */
+add_filter( 'wpseo_breadcrumb_output_class', 'theme_breadcrumb_output_class', 10, 1 );
+function theme_breadcrumb_output_class( $class ) {
+    $class = 'breadcrumb-custom-type-1';
+    return $class;
+}
+
+/**
+ * Yoast Breadcrumbs: Single link wrapper
+ */
+add_filter( 'wpseo_breadcrumb_single_link_wrapper', 'theme_breadcrumb_single_link_wrapper', 10, 1 );
+function theme_breadcrumb_single_link_wrapper( $element ) {
+    $element = 'li';
+    return $element;
+}

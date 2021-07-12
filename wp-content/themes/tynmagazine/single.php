@@ -24,6 +24,8 @@ $prev_post = get_previous_post();
     <div class="shell">
         <div class="range range-center range-50">
             <div class="cell-md-8 cell-lg-8">
+                <?php echo theme_add_breadcrumbs(); ?>
+                
                 <div class="post-content">
                     <?php echo theme_tag_list( $categories ); ?>
 

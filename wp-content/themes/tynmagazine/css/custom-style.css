@@ -7,6 +7,11 @@
 .header-banner {
     padding-bottom: 0;
 }
+.breadcrumb-custom-type-1 .breadcrumb_last:before {
+    padding: 0 10px;
+    content: "/";
+    color: #888a8c;
+}
 
 /* WP Block Column */
 .wp-block-column .shell {
