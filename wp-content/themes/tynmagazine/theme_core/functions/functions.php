@@ -666,7 +666,7 @@ function theme_breadcrumb_single_link_wrapper( $element ) {
 function theme_pagination() {
     $args = array(
         'type'      => 'list',
-        'mid_size'      => 2,
+        'mid_size'  => 2,
     );
 
     $pagination = get_the_posts_pagination( $args );
@@ -677,5 +677,65 @@ function theme_pagination() {
     $html .= '</div>';
 
     return $html;
+}
 
+/**
+ * Latest posts
+ */
+function theme_latest_posts() {
+    $latest_posts = get_posts( 
+        array( 
+            'numberposts' => 6
+        )
+    );
+
+    if( $latest_posts ) { ?>
+
+        <div class="section-xs bg-white">
+            <div class="range range-20">
+                <div class="cell-xs-12">
+                    <div class="section-title">
+                        <h4>Mira nuestras últimas noticias</h4>
+                    </div>
+                </div>
+
+                <?php foreach( $latest_posts as $post ) {
+                    setup_postdata($post);
+
+                    $feat_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'grid_small' );
+                    $categories = get_the_category( $post->ID );
+                    $title = get_the_title($post->ID);
+                    $permalink = get_the_permalink($post->ID);
+                    $signature = theme_get_post_signature( $post->ID );
+                    $author_name = $signature['name'];
+                    $author_url = $signature['url'];
+                    $date = get_the_date( '', $post->ID );
+                    ?>
+                    
+                    <div class="cell-xs-6 cell-md-12 cell-lg-6">
+                        <div class="post-type-3">
+                            <div class="unit unit-vertical unit-sm-horizontal">
+                                <div class="unit__left">
+                                    <div class="img-block">
+                                        <a href="<?php echo $permalink; ?>"><img src="<?php echo esc_url($feat_img[0]); ?>" width="<?php echo $feat_img[1]; ?>" height="<?php echo $feat_img[2]; ?>" alt="" /></a>
+                                        <?php echo theme_tag_list( $categories ); ?>
+                                    </div>
+                                </div>
+                                <div class="unit__body">
+                                    <h5 class="title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h5>
+                                    <div class="bottom-block">
+                                        <?php echo theme_meta_list( $author_url, $author_name, $date ); ?>
+                                        <?php echo theme_share_block( $post->ID ); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php }
+                wp_reset_postdata(); ?>
+            </div>
+        </div>
+
+    <?php }
 }

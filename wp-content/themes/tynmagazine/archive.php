@@ -18,7 +18,7 @@ $i=1;
             <div class="cell-md-8 cell-lg-8">
                 <?php echo theme_add_breadcrumbs(); ?>
 
-                <?php if ( have_posts() ) : ?>
+                <?php if ( have_posts() ) { ?>
                     
                     <div class="range range-center range-30">
 
@@ -145,15 +145,31 @@ $i=1;
 
                         <?php }
 
-                            $i++;
-                            endwhile; ?>
+                        $i++;
+                        endwhile; ?>
+
                     </div>
 
-                <?php endif;
+                <?php 
+                
+                    echo theme_pagination();
 
-                echo theme_pagination();
+                } else { ?>
 
-                ?>
+                    <div class="section-xs bg-white">
+                        <div class="section-title">
+                            <h3>No hay notas para mostrar</h3>
+                        </div>
+
+                        <div class="txt-noresults">
+                            <p>En este momento no existen publicaciones para mostrar con esos términos.</p>
+                            <p class="gohome">Ir a la <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></p>
+                        </div>
+
+                        <?php echo theme_latest_posts(); ?>
+                    </div>
+
+                <?php }; ?>
 
             </div>
 

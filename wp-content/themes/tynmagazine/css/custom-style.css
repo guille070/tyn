@@ -94,3 +94,21 @@ html.lt-ie-10 * + .range, * + .range.block-grilla-noticias {
     background-color: transparent !important;
     border-color: transparent !important;
 }
+
+/* Search */
+body.search {
+    background: inherit;
+    color: inherit;
+}
+
+/* Txt no results */
+.txt-noresults {
+    margin-bottom: 50px;
+}
+.txt-noresults p {
+    text-align: left;
+}
+.txt-noresults .gohome {
+    font-style: italic;
+    font-weight: bold;
+}
