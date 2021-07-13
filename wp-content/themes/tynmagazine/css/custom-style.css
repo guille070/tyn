@@ -67,3 +67,30 @@ html.lt-ie-10 * + .range, * + .range.block-grilla-noticias {
 .rel-posts .elem-item {
     margin-top: 30px;
 }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+/* Pagination */
+.pagination-custom .current {
+    color: #fff;
+    background-color: #c9000a;
+    border-color: #c9000a;
+    box-shadow: none;
+}
+.pagination-custom > li > .dots:hover {
+    color: #4a4a4a !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}

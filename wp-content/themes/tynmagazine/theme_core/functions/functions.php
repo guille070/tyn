@@ -430,7 +430,7 @@ function theme_get_post_signature( $post_id ) {
 /**
  * Tag list html
  */
-function theme_tag_list($categories) {
+function theme_tag_list($categories, $class_name = 'tag-list') {
 
     if ( empty($categories) ) {
         return;
@@ -439,7 +439,7 @@ function theme_tag_list($categories) {
     $i = 0;
     ?>
 
-    <ul class="tag-list">
+    <ul class="<?php echo $class_name; ?>">
         <?php foreach ($categories as $category) { ?>
             <li><a href="<?php echo esc_url(get_category_link($category)); ?>"><?php echo $category->name; ?></a></li>
         <?php if (!is_single() && ++$i == 2) break;
@@ -658,4 +658,24 @@ add_filter( 'wpseo_breadcrumb_single_link_wrapper', 'theme_breadcrumb_single_lin
 function theme_breadcrumb_single_link_wrapper( $element ) {
     $element = 'li';
     return $element;
+}
+
+/**
+ * Pagination
+ */
+function theme_pagination() {
+    $args = array(
+        'type'      => 'list',
+        'mid_size'      => 2,
+    );
+
+    $pagination = get_the_posts_pagination( $args );
+    $pagination = str_replace( "<ul class='page-numbers'>", '<ul class="pagination-custom">', $pagination );
+
+    $html = '<div class="section-xs text-left">';
+    $html .= $pagination;
+    $html .= '</div>';
+
+    return $html;
+
 }
