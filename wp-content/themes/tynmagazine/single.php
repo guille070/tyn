@@ -39,7 +39,7 @@ $prev_post = get_previous_post();
                     
                     <?php the_content(); ?>
 
-                    <div class="tag-block bottom-block">
+                    <div class="tag-block bottom-block hidden-block">
                         <div class="left-block">
                             <?php if (!empty($tags)) { ?>
                                 <span class="icon fa-folder-o"></span>
