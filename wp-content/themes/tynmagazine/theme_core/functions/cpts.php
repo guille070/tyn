@@ -4,7 +4,7 @@
     *
     * Funciones para registro de CPT
     *
-    * @copyright Copyright (c) 2019 Elegra
+    * @copyright Copyright (c) 2020 Dandy Agency
 */
 
 /**

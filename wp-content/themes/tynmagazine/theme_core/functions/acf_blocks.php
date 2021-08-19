@@ -60,6 +60,13 @@ function register_acf_block_types() {
             'render_template'   => $path . 'banners.php',
             'icon'              => 'format-gallery'
         ),
+        array(
+            'name'              => 'newsletter-configurador',
+            'title'             => __('Configurador de Newsletter', THEME_TEXTDOMAIN),
+            'render_template'   => $path . 'newsletter_configurador.php',
+            'icon'              => 'format-gallery',
+            'mode'              => 'preview'
+        ),
     );
     
     if ($blocks) {

@@ -113,6 +113,17 @@ function theme_acf_json_load_point( $paths ) {
 }
 
 /**
+ * ACF Relationship jquery
+ */
+add_filter('acf/fields/relationship/query', 'theme_acf_fields_relationship_query', 10, 3);
+function theme_acf_fields_relationship_query( $args, $field, $post_id ) {
+
+    $args['post_status'] = array('publish', 'future');
+
+    return $args;
+}
+
+/**
 * Theme options scripts in head
 */
 function theme_options_scripts_head(){
@@ -738,4 +749,74 @@ function theme_latest_posts() {
         </div>
 
     <?php }
+}
+
+/**
+ * Allowed blocks
+ */
+function theme_allowed_blocks($allowed_block_types, $post) {
+
+    $template = get_page_template_slug($post);
+
+    if ($template == 'pag_tyn-newsletter3.php') {
+        return [
+            'acf/newsletter-configurador'
+        ];
+    }
+
+    return $allowed_block_types;
+
+}
+add_filter('allowed_block_types', 'theme_allowed_blocks', 10, 2);
+
+/**
+ * Newsletter HTML
+ */
+function theme_print_newsletter_html( $post_id ) {
+
+    if (empty($post_id)) return;
+
+    $title = get_the_title( $post_id );
+    $url = get_permalink( $post_id );
+    $post_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), array(450,315) );
+    ?>
+
+    <div style="width: 320px; display: inline-block; vertical-align: top; margin-top: 3px;">
+        <table width="310" height="300" bgcolor="#f6f6f6" valign="top">
+            <tr>
+                <td height="95" valign="top" style="padding: 5px 5px 0 5px; width: 294px;">
+                <h1 id="Titulo1" style="color: #c9000a; text-align: left; font-size: 22px; font-family: Arial; font-weight: bold; line-height: 120%; margin: 0"><a style="color: #c9000a" href="<?php echo $url;?>"><?php echo $title;?></a></h1>
+                </td>
+            </tr>
+            <tr>
+                <td id="Imagen1" height="200px" valign="top" style="padding: 2px 5px 5px 5px;"><a style="color: #c9000a" href="<?php echo $url;?>"><img src="<?php echo $post_image[0];?>" width="297" height="208"/></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <?php
+}
+
+/**
+ * Newsletter Banners
+ */
+function theme_print_newsletter_banner( $banner_id ) {
+
+    if (empty($banner_id)) return;
+    ?>
+
+    <div style="width: 320px; display: inline-block; vertical-align: top; margin-top: 3px;">
+        <table width="100%">
+            <tr>
+                <td style="text-align: center;">
+
+                    <?php echo do_shortcode( '[banner id='.$banner_id.']' ); ?>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <?php
 }

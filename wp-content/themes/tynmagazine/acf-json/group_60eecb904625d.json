@@ -1,0 +1,76 @@
+{
+    "key": "group_60eecb904625d",
+    "title": "Block: Configurador de Newsletter",
+    "fields": [
+        {
+            "key": "field_60eecbe02afa3",
+            "label": "Seleccionar las notas para el Newsletter (mínimo 2, máximo 8)",
+            "name": "rel_notas",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": 2,
+            "max": 8,
+            "return_format": "id"
+        },
+        {
+            "key": "field_60f039407d658",
+            "label": "Seleccione los banners (mínimo 1, máximo 4)",
+            "name": "rel_banners",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "banner"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": 4,
+            "return_format": "id"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/newsletter-configurador"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1626356288
+}
