@@ -16,6 +16,10 @@ $rel_notas = get_field('rel_notas');
 $rel_banners = get_field('rel_banners');
 ?>
 
+<?php if (! is_admin() ){ ?>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<?php } ?>
+
 <script type="text/javascript">
     function copyToClipboard(element) {
         var $temp = jQuery("<input>");
