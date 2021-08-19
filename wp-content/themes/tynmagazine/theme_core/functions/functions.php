@@ -804,15 +804,17 @@ function theme_print_newsletter_html( $post_id ) {
 function theme_print_newsletter_banner( $banner_id ) {
 
     if (empty($banner_id)) return;
+
+    $shortcode = do_shortcode( '[banner id='.$banner_id.']' );
+    $shortcode = preg_replace('/ custom-banners-theme-standard-white" /', ' custom-banners-theme-standard-white" style="border: 0; position: relative; width: 100%;" ', $shortcode);  
+    $shortcode = preg_replace('/ class="custom_banners_big_link" /', ' class="custom_banners_big_link" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 999;" ', $shortcode);  
     ?>
 
     <div style="width: 320px; display: inline-block; vertical-align: top; margin-top: 3px;">
         <table width="100%">
             <tr>
                 <td style="text-align: center;">
-
-                    <?php echo do_shortcode( '[banner id='.$banner_id.']' ); ?>
-
+                    <?php echo $shortcode; ?>
                 </td>
             </tr>
         </table>
