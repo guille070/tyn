@@ -6,8 +6,17 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
-        <!--<link rel="icon" href="<?php echo get_stylesheet_directory_uri() ?>/front/images/favicon.ico" type="image/x-icon">-->
-        
+
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri() ?>/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri() ?>/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri() ?>/favicon/favicon-16x16.png">
+        <link rel="manifest" href="<?php echo get_stylesheet_directory_uri() ?>/favicon/site.webmanifest">
+        <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon/safari-pinned-tab.svg" color="#c9000a">
+        <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#c9000a">
+        <meta name="msapplication-config" content="<?php echo get_stylesheet_directory_uri() ?>/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#c9000a">
+
         <?php wp_head(); ?>
 
         <!--[if lt IE 10]>
