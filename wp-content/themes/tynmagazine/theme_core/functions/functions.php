@@ -43,6 +43,17 @@ function theme_setup()
 add_action( 'after_setup_theme', 'theme_setup' );
 
 /**
+* Add classic editor en posts
+*/
+function theme_gutenberg_post_template() {
+    $post_type_object = get_post_type_object( 'post' );
+    $post_type_object->template = array(
+        array( 'core/freeform' ),
+    );
+}
+add_action( 'init', 'theme_gutenberg_post_template' );
+
+/**
 * Google fonts
 */
 function theme_google_fonts() { ?>
