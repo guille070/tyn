@@ -1,0 +1,224 @@
+/* Classic Theme */
+.custom-banners-theme-classic{
+}
+
+.banner_wrapper .custom-banners-theme-classic.banner {
+    border: 0 none;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    text-align: center;
+	width: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #666;
+    padding: 10px;
+    position: relative;
+}
+
+.banner_wrapper .custom-banners-theme-classic img{
+    border-radius: 6px;
+}
+
+.banner_wrapper.cycle-slide .custom-banners-theme-classic img{
+    border-radius: 6px 6px 0 0;
+}
+
+.banner.custom-banners-theme-classic {
+    margin: 0px !important;
+}
+
+.custom-banners-cycle-slideshow-theme-classic .banner.custom-banners-theme-classic {
+    margin: 3px !important;
+	padding: 10px 10px 35px !important;
+}
+
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-classic .cycle-slide{
+    right: 0;
+	left: 0;
+}
+
+.banner_wrapper .banner.custom-banners-theme-classic .banner_caption {
+    background-image: url("../img/card_caption_bg.png");
+    border-radius: 47px;
+    bottom: 20px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Arial";
+    font-size: 12px;
+    line-height: 1.25;
+    margin: 7px 25% 0;
+    padding: 10px 20px;
+    position: absolute;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    top: auto;
+    width: auto;
+}
+
+.banner_wrapper.cycle-slide .banner.custom-banners-theme-classic .banner_caption {
+    bottom: 45px;
+}
+
+.banner.custom-banners-theme-classic  .banner_call_to_action .banner_btn_cta {
+    background: transparent;
+    border: 0 none;
+    border-radius: 0;
+    color: #00c0ff;
+    display: inline-block;
+	font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slideshow Controls */
+.custom-b-cycle-controls.custom-banners-controls-theme-classic {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic .custom-b-cycle-prev {
+    background-image: url("../img/classic_theme_arrow_sprite.png");
+    bottom: auto;
+    cursor: pointer;
+    height: 34px;
+    left: 23px;
+	margin-top: -37px;
+    position: absolute;
+    right: 46px;
+    text-indent: -10000px;
+    top: 50%;
+    width: 34px;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic .custom-b-cycle-next {
+    background-image: url("../img/classic_theme_arrow_sprite.png");
+    background-position: -34px 0;
+    bottom: auto;
+    cursor: pointer;
+    height: 34px;
+	margin-top: -37px;
+    position: absolute;
+    right: 23px;
+    text-indent: -10000px;
+    top: 50%;
+    width: 34px;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic .custom-b-cycle-pager {
+    bottom: 12px;
+    display: inline-block;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: auto;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic .custom-b-cycle-pager span {
+    background-image: url("../img/window_pager_gray.png");
+    background-repeat: no-repeat;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 28px;
+    height: 10px;
+    line-height: 1.4em;
+	margin: 0 1px;
+    opacity: 1;
+    text-indent: -10000px;
+    width: 10px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: url("../img/window_pager_black.png");
+}
+
+/* Yellow Color Scheme */
+.custom-banners-theme-classic-yellow.banner .banner_call_to_action .banner_btn_cta {
+    color: #000000;
+}
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-yellow .custom-b-cycle-prev {
+    background-image: url("../img/classic_theme_yellow_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-yellow .custom-b-cycle-next {
+    background-image: url("../img/classic_theme_yellow_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-yellow .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: url("../img/classic_theme_yellow_pager.png");
+}
+
+.banner_wrapper .custom-banners-theme-classic-yellow.banner .banner_caption {
+    background-image: url("../img/classic_yellow_caption.png");
+}
+
+/* Green Color Scheme */
+.custom-banners-theme-classic-green.banner .banner_call_to_action .banner_btn_cta {
+    color: #000000;
+}
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-green .custom-b-cycle-prev {
+    background-image: url("../img/classic_theme_green_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-green .custom-b-cycle-next {
+    background-image: url("../img/classic_theme_green_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-green .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: url("../img/classic_theme_green_pager.png");
+}
+
+.banner_wrapper .custom-banners-theme-classic-green.banner .banner_caption {
+    background-image: url("../img/classic_green_caption.png");
+}
+
+/* Blue Color Scheme */
+.custom-banners-theme-classic-blue.banner .banner_call_to_action .banner_btn_cta {
+    color: #00c0ff;
+}
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-blue .custom-b-cycle-prev {
+    background-image: url("../img/classic_theme_blue_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-blue .custom-b-cycle-next {
+    background-image: url("../img/classic_theme_blue_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-blue .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: url("../img/classic_theme_blue_pager.png");
+}
+
+.banner_wrapper .custom-banners-theme-classic-blue.banner .banner_caption {
+    background-image: url("../img/classic_blue_caption.png");
+}
+
+/* White Color Scheme */
+.custom-banners-theme-classic-white.banner .banner_call_to_action .banner_btn_cta {
+    color: #FFFFFF;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-white .custom-b-cycle-prev {
+    background-image: url("../img/classic_theme_white_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-white .custom-b-cycle-next {
+    background-image: url("../img/classic_theme_white_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-classic-white .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: url("../img/classic_theme_white_pager.png");
+}
+
+.banner_wrapper .custom-banners-theme-classic-white.banner .banner_caption {
+    background-image: url("../img/classic_white_caption.png");
+	color: #000;
+}

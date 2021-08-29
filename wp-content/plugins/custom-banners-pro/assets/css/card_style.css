@@ -1,0 +1,335 @@
+/* Card Theme */
+/* White is the Default Color Scheme */
+.custom-banners-theme-card{
+}
+
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-card {
+    position: relative;
+}
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-card .banner {
+	max-height: none !important;
+	/* height: auto !important; */
+}
+
+.banner_wrapper .custom-banners-theme-card.banner{
+    border: 0 none;
+	width: 100%;
+	text-align: center;
+}
+
+.custom-banners-cycle-slideshow-theme-card .cycle-slide{
+    right: 0;
+	left: 0;
+}
+
+.banner_wrapper .banner.custom-banners-theme-card .banner_caption {
+    background-image: url("../img/card_caption_bg.png");
+    border-radius: 47px;
+	position: relative;
+	margin: 7px auto 0;
+    bottom: auto;
+    color: #fff;
+    font-family: "Arial";
+    font-size: 12px;
+    padding: 10px 20px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    top: 0;
+	width: auto;
+	display: inline-block;
+}
+
+.banner_wrapper .banner.custom-banners-theme-card  .banner_call_to_action .banner_btn_cta {
+    background: transparent;
+    border: 0 none;
+    border-radius: 0;
+    color: #00c0ff;
+    display: inline-block;
+	font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slideshow Controls */
+.custom-b-cycle-controls.custom-banners-controls-theme-card {
+    bottom: 0;
+    height: 58px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card .custom-b-cycle-prev {
+    background-image: url("../img/card_theme_arrow_sprite.png");
+	bottom: 12px;
+    cursor: pointer;
+    height: 34px;
+    left: auto;
+	right: 46px;
+    position: absolute;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card .custom-b-cycle-next {
+    background-image: url("../img/card_theme_arrow_sprite.png");
+	background-position: -34px 0;
+	bottom: 12px;
+    cursor: pointer;
+    height: 34px;
+    right: 12px;
+    position: absolute;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card .custom-b-cycle-pager {
+    bottom: 12px;
+    display: inline-block;
+    position: absolute;
+    right: 87px;
+    text-align: right;
+    width: auto;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card .custom-b-cycle-pager span {
+    color: white;
+	text-shadow:
+		-1px -1px 0 #000,  
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1.4em;
+    opacity: 1;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card .custom-b-cycle-pager span.cycle-pager-active {
+    color: black;
+	text-shadow:
+		-1px -1px 0 #fff,  
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+		1px 1px 0 #fff;
+}
+
+/* Yellow Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-card-yellow .banner_call_to_action .banner_btn_cta {
+    background: transparent;
+    border: 0 none;
+    border-radius: 0;
+    color: #00c0ff;
+    display: inline-block;
+	font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-yellow  .custom-b-cycle-prev {
+    background-image: url("../img/card_theme_arrow_sprite_yellow.png");
+	bottom: 12px;
+    cursor: pointer;
+    height: 34px;
+    left: auto;
+	right: 46px;
+    position: absolute;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-yellow  .custom-b-cycle-next {
+    background-image: url("../img/card_theme_arrow_sprite_yellow.png");
+	background-position: -34px 0;
+	bottom: 12px;
+    cursor: pointer;
+    height: 34px;
+    right: 12px;
+    position: absolute;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-yellow  .custom-b-cycle-pager span {
+    color: white;
+	text-shadow:
+		-1px -1px 0 #000,  
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1.4em;
+    opacity: 1;
+}
+/* Purple Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-card-purple .banner_call_to_action .banner_btn_cta {
+    background: transparent;
+    border: 0 none;
+    border-radius: 0;
+    color: #c197d8;
+    display: inline-block;
+	font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-purple  .custom-b-cycle-prev {
+    background-image: url("../img/card_theme_arrow_sprite_purple.png");
+	bottom: 12px;
+    cursor: pointer;
+    height: 34px;
+    left: auto;
+	right: 46px;
+    position: absolute;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-purple  .custom-b-cycle-next {
+    background-image: url("../img/card_theme_arrow_sprite_purple.png");
+	background-position: -34px 0;
+	bottom: 12px;
+    cursor: pointer;
+    height: 34px;
+    right: 12px;
+    position: absolute;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-purple  .custom-b-cycle-pager span {
+    color: #c197d8;
+	text-shadow:
+		-1px -1px 0 #000,  
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1.4em;
+    opacity: 1;
+}
+/* Salmon Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-card-salmon .banner_call_to_action .banner_btn_cta {
+    background: transparent;
+    border: 0 none;
+    border-radius: 0;
+    color: #ff6f6f;
+    display: inline-block;
+	font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-salmon  .custom-b-cycle-prev {
+    background-image: url("../img/card_theme_arrow_sprite_salmon.png");
+	bottom: 12px;
+    cursor: pointer;
+    height: 34px;
+    left: auto;
+	right: 46px;
+    position: absolute;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-salmon  .custom-b-cycle-next {
+    background-image: url("../img/card_theme_arrow_sprite_salmon.png");
+	background-position: -34px 0;
+	bottom: 12px;
+    cursor: pointer;
+    height: 34px;
+    right: 12px;
+    position: absolute;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-salmon  .custom-b-cycle-pager span {
+    color: #ff6f6f;
+	text-shadow:
+		-1px -1px 0 #000,  
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1.4em;
+    opacity: 1;
+}
+/* Black Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-card-black .banner_call_to_action .banner_btn_cta {
+    background: transparent;
+    border: 0 none;
+    border-radius: 0;
+    color: #000000;
+    display: inline-block;
+	font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-black  .custom-b-cycle-prev {
+    background-image: url("../img/card_theme_arrow_sprite_black.png");
+	bottom: 12px;
+    cursor: pointer;
+    height: 34px;
+    left: auto;
+	right: 46px;
+    position: absolute;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-black  .custom-b-cycle-next {
+    background-image: url("../img/card_theme_arrow_sprite_black.png");
+	background-position: -34px 0;
+	bottom: 12px;
+    cursor: pointer;
+    height: 34px;
+    right: 12px;
+    position: absolute;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-card-black  .custom-b-cycle-pager span {
+    color: #000000;
+	text-shadow:
+		-1px -1px 0 #000,  
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1.4em;
+    opacity: 1;
+}

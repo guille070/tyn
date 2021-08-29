@@ -1,0 +1,260 @@
+/* Corporate Theme */
+.custom-banners-theme-corporate{
+}
+
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-corporate {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 0 40px;
+    overflow: visible;
+    padding: 0 0 20px;
+    position: relative;
+}
+
+.banner_wrapper .custom-banners-theme-corporate.banner {
+    border: 0 none;
+    font-family: Times New Roman;
+    font-size: 13px;
+    text-align: center;
+	width: auto;
+}
+
+.banner_wrapper .custom-banners-theme-corporate img{
+    border-radius: 0;
+}
+
+.banner.custom-banners-theme-corporate {
+    background-color: #000;
+    padding: 7px;
+}
+
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-corporate .cycle-slide{
+    right: 0;
+	left: 0;
+}
+
+.custom-banners-cycle-slideshow-theme-corporate .banner {
+	margin-bottom: 0px;
+}
+
+.custom-banners-cycle-slideshow-theme-corporate[data-cycle-auto-height="container"] .banner {
+	margin-bottom: 20px;
+}
+
+
+.banner_wrapper .banner.custom-banners-theme-corporate .banner_caption ,
+.banner_wrapper .banner.custom-banners-theme-corporate.has_cta .banner_caption {
+	background-image: none !important;
+	background-color: transparent !important;
+	text-align: right;
+	padding: 0 ;
+}
+
+.banner_wrapper .banner.custom-banners-theme-corporate .banner_caption .banner_caption_inner {
+    background-image: url("../img/card_caption_bg.png");
+    bottom: 15px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Times New Roman";
+    font-size: 15px;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    right: 7px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75);
+    top: auto;
+    width: auto;
+}
+
+.banner_wrapper .banner.custom-banners-theme-corporate.has_cta .banner_caption .banner_caption_inner {
+    padding: 10px;
+}
+
+.banner.custom-banners-theme-corporate  .banner_call_to_action{
+	margin: 0 0 0 10px;
+}
+
+.banner.custom-banners-theme-corporate  .banner_call_to_action .banner_btn_cta {
+	background-color: transparent;
+    background-image: url("../img/card_caption_bg.png");
+    border: 0 none;
+    border-radius: 0;
+    color: #ffffff;
+    display: inline-block;
+	font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px;
+	text-decoration: none;
+}
+
+/* Slideshow Controls */
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate {
+	background-color: transparent;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate .custom-b-cycle-prev {
+    background-image: url("../img/corporate_theme_arrow_sprite.png");
+    bottom: auto;
+    cursor: pointer;
+    height: 34px;
+    left: 10px;
+	margin-top: -37px;
+    position: absolute;
+    right: 46px;
+    text-indent: -10000px;
+    top: 50%;
+    width: 34px;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate .custom-b-cycle-next {
+    background-image: url("../img/corporate_theme_arrow_sprite.png");
+    background-position: -34px 0;
+    bottom: auto;
+    cursor: pointer;
+    height: 34px;
+	margin-top: -37px;
+    position: absolute;
+    right: 10px;
+    text-indent: -10000px;
+    top: 50%;
+    width: 34px;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate .custom-b-cycle-pager {
+    bottom: 2px;
+    display: block;
+    height: 18px;
+    line-height: 1em;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: auto;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate .custom-b-cycle-pager span {
+    background-image: none;
+	background-color: lightgrey;
+    color: white;
+	text-shadow: 1px 1px black;
+    cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+	margin-left: 4px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: none;
+	background-color: black;
+}
+
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate .custom-b-cycle-pager span a {
+    color: #fff;
+    display: block;
+    font-family: Times New Roman;
+    font-size: 12px;
+	font-weight: bold;
+    height: 18px;
+    line-height: 18px;
+	font-style: italic;
+    text-align: center;
+    text-decoration: none;
+    width: 18px;
+}
+
+/* Salmon Color Scheme */
+.banner.custom-banners-theme-corporate-salmon {
+    background-color: #ff6f6f;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-salmon {
+	background-color: transparent;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-salmon .custom-b-cycle-pager span {
+	background-color: #ff6f6f;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-salmon .custom-b-cycle-pager span.cycle-pager-active {
+	background-color: #ff6f6f;
+}
+
+.banner_wrapper .banner.custom-banners-theme-corporate-salmon .banner_caption .banner_caption_inner {
+    background-image: url("../img/corporate_salmon_caption.png");
+}
+
+/* Sky Blue Color Scheme */
+.banner.custom-banners-theme-corporate-sky_blue {
+    background-color: #3498db;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-sky_blue {
+	background-color: transparent;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-sky_blue .custom-b-cycle-pager span {
+	background-color: #3498db;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-sky_blue .custom-b-cycle-pager span.cycle-pager-active {
+	background-color: #3498db;
+}
+
+.banner_wrapper .banner.custom-banners-theme-corporate-sky_blue .banner_caption .banner_caption_inner {
+    background-image: url("../img/corporate_blue_caption.png");
+}
+
+/* Green Hills Color Scheme */
+.banner.custom-banners-theme-corporate-green_hills {
+    background-color: #a8d164;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-green_hills {
+	background-color: transparent;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-green_hills .custom-b-cycle-pager span {
+	background-color: #a8d164;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-green_hills .custom-b-cycle-pager span.cycle-pager-active {
+	background-color: #a8d164;
+}
+
+.banner_wrapper .banner.custom-banners-theme-corporate-green_hills .banner_caption .banner_caption_inner {
+    background-image: url("../img/corporate_green_caption.png");
+}
+
+/* Sandy Beach Color Scheme */
+.banner.custom-banners-theme-corporate-sandy_beach {
+    background-color: #e5ba5a;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-sandy_beach {
+	background-color: transparent;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-sandy_beach .custom-b-cycle-pager span {
+	background-color: #e5ba5a;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-corporate-sandy_beach .custom-b-cycle-pager span.cycle-pager-active {
+	background-color: #e5ba5a;
+}
+
+.banner_wrapper .banner.custom-banners-theme-corporate-sandy_beach .banner_caption .banner_caption_inner {
+    background-image: url("../img/corporate_yellow_caption.png");
+}

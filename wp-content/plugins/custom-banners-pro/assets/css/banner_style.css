@@ -1,0 +1,309 @@
+/* Banner Theme */
+.custom-banners-theme-banner{
+}
+
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-banner {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    position: relative;
+}
+
+.banner_wrapper .custom-banners-theme-banner.banner {
+    border: 0 none;
+    font-family: Times New Roman;
+    font-size: 13px;
+    text-align: center;
+	width: auto;
+}
+
+.banner_wrapper .custom-banners-theme-banner img{
+    border-radius: 0;
+}
+
+.banner.custom-banners-theme-banner {
+    background-color: #fff;
+    box-shadow: 0 0 8px #666;
+    margin: 30px 8px 8px;
+    overflow: visible;
+    padding: 1px;
+}
+
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-banner .cycle-slide{
+    right: 0;
+	left: 0;
+}
+
+.banner_wrapper .banner.custom-banners-theme-banner .banner_caption, 
+.banner_wrapper .banner.custom-banners-theme-banner.has_cta .banner_caption {
+	background-color: transparent !important;
+    background-image: none !important;
+    bottom: auto;
+    min-height: 37px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    top: -20px;
+}
+
+.banner_wrapper .banner.custom-banners-theme-banner .banner_caption .banner_caption_inner {
+    background-image: url("../img/banner_theme_light_grey_caption.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #000;
+    display: inline-block;
+    font-family: "Times New Roman";
+	font-size: 15px;
+    line-height: 1.5em;
+    margin: 0 27px;
+    min-height: 17px;
+    min-width: 120px;
+    padding: 10px 40px;
+    position: relative;
+    text-shadow: none;
+    width: auto;
+}
+
+.banner_wrapper .banner.custom-banners-theme-banner.has_cta .banner_caption .banner_caption_inner{
+}
+
+.banner.custom-banners-theme-banner  .banner_call_to_action{
+	margin: 0 0 0 10px;
+}
+
+.banner.custom-banners-theme-banner .banner_call_to_action .banner_btn_cta {
+    background-color: #d9d9d9;
+    background-image: none;
+    border: 0 none;
+    border-radius: 14px;
+    color: #000;
+    display: inline;
+    font-size: 15px;
+    font-weight: normal;
+    height: auto;
+    margin: 0;
+    padding: 3px 8px;
+    text-decoration: none;
+}
+
+/* Slideshow Controls */
+.custom-b-cycle-controls.custom-banners-controls-theme-banner {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner .custom-b-cycle-prev {
+    background-image: url("../img/banner_theme_arrow_sprite.png");
+    bottom: auto;
+    cursor: pointer;
+    height: 36px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    text-indent: -10000px;
+    top: 50%;
+    width: 35px;
+    z-index: 9999;
+	margin-top: -18px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner .custom-b-cycle-next {
+    background-image: url("../img/banner_theme_arrow_sprite.png");
+    background-position: -35px 0;
+    bottom: auto;
+    cursor: pointer;
+    height: 36px;
+    position: absolute;
+    right: 0;
+    text-indent: -10000px;
+    top: 50%;
+    width: 36px;
+    z-index: 9999;
+	margin-top: -18px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner .custom-b-cycle-pager {
+    bottom: 0px;
+    display: block;
+    height: 38px;
+    line-height: 1em;
+    overflow: visible;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: auto;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner .custom-b-cycle-pager span::after {
+	content: none;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner .custom-b-cycle-pager span {
+    background-image: url("../img/banner_theme_light_grey_pager_bg.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    height: 38px;
+    margin-left: 4px;
+    opacity: 1;
+    width: 24px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner .custom-b-cycle-pager span.cycle-pager-active {
+    background-color: transparent;
+    background-image: url("../img/banner_theme_light_grey_pager_active_bg.png");
+    background-position: 0 bottom;
+    height: 38px;
+    position: relative;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner .custom-b-cycle-pager span a {
+    color: #000;
+    display: block;
+    font-family: Times New Roman;
+    font-size: 11px;
+    font-weight: normal;
+	font-style: italic;
+    height: 38px;
+    line-height: 56px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner .custom-b-cycle-pager .cycle-pager-active a {
+}
+
+/* Salmon Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-banner-salmon .banner_caption .banner_caption_inner {
+    background-image: url("../img/banner_theme_salmon_caption.png");
+    color: #fff;
+}
+
+.banner.custom-banners-theme-banner-salmon .banner_call_to_action .banner_btn_cta {
+    background-color: #d95e5e;
+    color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-salmon .custom-b-cycle-prev {
+    background-image: url("../img/banner_theme_salmon_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-salmon .custom-b-cycle-next {
+    background-image: url("../img/banner_theme_salmon_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-salmon .custom-b-cycle-pager span {
+    background-image: url("../img/banner_theme_salmon_pager_bg.png");
+	color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-salmon .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: url("../img/banner_theme_salmon_pager_active_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-salmon .custom-b-cycle-pager span a {
+    color: #fff;
+}
+
+/* Green Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-banner-green .banner_caption .banner_caption_inner {
+    background-image: url("../img/banner_theme_green_caption.png");
+    color: #fff;
+}
+
+.banner.custom-banners-theme-banner-green .banner_call_to_action .banner_btn_cta {
+    background-color: #8fb255;
+    color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-green .custom-b-cycle-prev {
+    background-image: url("../img/banner_theme_green_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-green .custom-b-cycle-next {
+    background-image: url("../img/banner_theme_green_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-green .custom-b-cycle-pager span {
+    background-image: url("../img/banner_theme_green_pager_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-green .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: url("../img/banner_theme_green_pager_active_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-green .custom-b-cycle-pager span a {
+    color: #fff;
+}
+
+/* Orange Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-banner-orange .banner_caption .banner_caption_inner {
+    background-image: url("../img/banner_theme_orange_caption.png");
+    color: #fff;
+}
+
+.banner.custom-banners-theme-banner-orange .banner_call_to_action .banner_btn_cta {
+    background-color: #d1922e;
+    color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-orange .custom-b-cycle-prev {
+    background-image: url("../img/banner_theme_orange_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-orange .custom-b-cycle-next {
+    background-image: url("../img/banner_theme_orange_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-orange .custom-b-cycle-pager span {
+    background-image: url("../img/banner_theme_orange_pager_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-orange .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: url("../img/banner_theme_orange_pager_active_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-orange .custom-b-cycle-pager span a {
+    color: #fff;
+}
+
+/* Fuscia Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-banner-fuscia .banner_caption .banner_caption_inner {
+    background-image: url("../img/banner_theme_fuscia_caption.png");
+    color: #fff;
+}
+
+.banner.custom-banners-theme-banner-fuscia .banner_call_to_action .banner_btn_cta {
+    background-color: #973662;
+    color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-fuscia .custom-b-cycle-prev {
+    background-image: url("../img/banner_theme_fuscia_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-fuscia .custom-b-cycle-next {
+    background-image: url("../img/banner_theme_fuscia_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-fuscia .custom-b-cycle-pager span {
+    background-image: url("../img/banner_theme_fuscia_pager_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-fuscia .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: url("../img/banner_theme_fuscia_pager_active_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-banner-fuscia .custom-b-cycle-pager span a {
+    color: #fff;
+}

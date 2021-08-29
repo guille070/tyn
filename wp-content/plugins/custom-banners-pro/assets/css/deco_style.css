@@ -1,0 +1,271 @@
+/* deco Theme */
+.custom-banners-theme-deco{
+}
+
+.banner_wrapper .custom-banners-theme-deco.banner {
+    border: 0 none;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    text-align: center;
+	width: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #666;
+    padding: 8px;
+    position: relative;
+}
+
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-deco {
+    padding-bottom: 0px;
+}
+
+.banner.custom-banners-theme-deco {
+    margin: 0px !important;
+}
+
+.custom-banners-cycle-slideshow-theme-deco .banner.custom-banners-theme-deco {
+    margin: 5px !important;
+}
+
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-deco .cycle-slide{
+    right: 0;
+	left: 0;
+}
+
+.banner_wrapper .banner.custom-banners-theme-deco .banner_caption {
+    background-image: none;
+	background-color: #30363a;
+    border-radius: 0px;
+    bottom: auto;
+    color: #fff;
+    display: inline-block;
+    font-family: "Trebuchet MS";
+    font-size: 13px;
+    margin: 0;
+    padding: 20px;
+    position: absolute;
+    text-shadow: transparent;
+    top: 8px;
+	left: 8px;
+	right: 8px;
+    width: auto;
+}
+
+.banner_wrapper .banner.custom-banners-theme-deco.has_cta .banner_caption {
+    /* padding: 10px 20px; */
+}
+
+.banner.custom-banners-theme-deco  .banner_call_to_action .banner_btn_cta {
+    background: transparent;
+    border: 0 none;
+    border-radius: 0;
+    color: #00c0ff;
+    display: inline-block;
+	font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+	text-decoration: none;
+}
+
+/* Slideshow Controls */
+.custom-b-cycle-controls.custom-banners-controls-theme-deco {
+    background-image: url("../img/white_caption_bg.png");
+    bottom: 13px;
+    height: 45px;
+    left: 13px;
+    position: absolute;
+    right: 13px;
+    text-align: center;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco .custom-b-cycle-prev {
+    background-image: url("../img/deco_theme_arrow_sprite.png");
+    bottom: auto;
+    cursor: pointer;
+    height: 34px;
+	margin-top: -17px;
+    left: 3px;
+    position: absolute;
+    right: 46px;
+    text-indent: -10000px;
+    top: 50%;
+    width: 34px;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco .custom-b-cycle-next {
+    background-image: url("../img/deco_theme_arrow_sprite.png");
+    background-position: -34px 0;
+    bottom: auto;
+    cursor: pointer;
+    height: 34px;
+	margin-top: -17px;
+    position: absolute;
+    right: 3px;
+    text-indent: -10000px;
+    top: 50%;
+    width: 34px;
+    z-index: 9999;
+}
+
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco .custom-b-cycle-pager {
+    bottom: 11px;
+    display: block;
+    height: 20px;
+    line-height: 1em;
+    position: absolute;
+    right: 35px;
+	left: 35px;
+    text-align: center;
+    width: auto;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco .custom-b-cycle-pager span {
+    background-color: #30363a;
+    background-image: none;
+	border: 1px solid #ffffff;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    margin-left: 4px;
+    text-shadow: transparent;
+    width: 18px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: none;
+	background-color: white;
+	border: 1px solid #30363a;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco .custom-b-cycle-pager span a {
+    color: #fff;
+    display: block;
+    font-family: trebuchet ms;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: bold;
+    height: 18px;
+    line-height: 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 17px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco .custom-b-cycle-pager span.cycle-pager-active a {
+    color: #30363a;
+}
+
+/* Blue Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-blue .custom-b-cycle-prev {
+    background-image: url("../img/deco_theme_blue_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-blue .custom-b-cycle-next {
+    background-image: url("../img/deco_theme_blue_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-blue .custom-b-cycle-pager span{
+    background-color: #2980b9;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-blue .custom-b-cycle-pager span.cycle-pager-active {
+    border: 1px solid #2980b9;
+}
+
+.banner_wrapper .custom-banners-theme-deco-blue.banner .banner_caption {
+    background-color: #2980b9;
+}
+
+.banner.custom-banners-theme-deco-blue  .banner_call_to_action .banner_btn_cta {
+    color: #000;
+}
+
+/* Fuschia Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-fuschia .custom-b-cycle-prev {
+    background-image: url("../img/deco_theme_fuschia_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-fuschia .custom-b-cycle-next {
+    background-image: url("../img/deco_theme_fuschia_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-fuschia .custom-b-cycle-pager span{
+    background-color: #b23f73;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-fuschia .custom-b-cycle-pager span.cycle-pager-active {
+    border: 1px solid #b23f73;
+}
+
+.banner_wrapper .custom-banners-theme-deco-fuschia.banner .banner_caption {
+    background-color: #b23f73;
+}
+
+.banner.custom-banners-theme-deco-fuschia  .banner_call_to_action .banner_btn_cta {
+    color: #000;
+}
+
+/* Lavendar Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-lavendar .custom-b-cycle-prev {
+    background-image: url("../img/deco_theme_lavendar_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-lavendar .custom-b-cycle-next {
+    background-image: url("../img/deco_theme_lavendar_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-lavendar .custom-b-cycle-pager span{
+    background-color: #be91d4;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-lavendar .custom-b-cycle-pager span.cycle-pager-active {
+    border: 1px solid #be91d4;
+}
+
+.banner_wrapper .custom-banners-theme-deco-lavendar.banner .banner_caption {
+    background-color: #be91d4;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-lavendar {
+    background-image: url("../img/card_caption_bg.png");
+}
+
+.banner.custom-banners-theme-deco-lavendar  .banner_call_to_action .banner_btn_cta {
+    color: #000;
+}
+
+/* Smoke Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-smoke .custom-b-cycle-prev {
+    background-image: url("../img/deco_theme_smoke_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-smoke .custom-b-cycle-next {
+    background-image: url("../img/deco_theme_smoke_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-smoke .custom-b-cycle-pager span{
+    background-color: #a9b7b8;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-smoke .custom-b-cycle-pager span.cycle-pager-active {
+    border: 1px solid #a9b7b8;
+}
+
+.banner_wrapper .custom-banners-theme-deco-smoke.banner .banner_caption {
+    background-color: #a9b7b8;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-deco-smoke {
+    background-image: url("../img/card_caption_bg.png");
+}
+
+.banner.custom-banners-theme-deco-smoke  .banner_call_to_action .banner_btn_cta {
+    color: #000;
+}

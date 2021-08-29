@@ -1,0 +1,238 @@
+/* tile Theme */
+.custom-banners-theme-tile{
+}
+
+.banner_wrapper .custom-banners-theme-tile.banner {
+    border: 0 none;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    text-align: center;
+	width: auto;
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 4px #666;
+    padding: 8px 8px 0;
+    position: relative;
+}
+
+.banner_wrapper.cycle-slide .custom-banners-theme-tile{
+	box-shadow: none;
+}
+
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-tile {
+    box-shadow: 0 0 4px #666;
+    padding-bottom: 68px;
+}
+
+.banner.custom-banners-theme-tile {
+}
+
+.custom-banners-cycle-slideshow-theme-tile .banner.custom-banners-theme-tile {
+}
+
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-tile .cycle-slide{
+    right: 0;
+	left: 0;
+}
+
+.banner_wrapper .banner.custom-banners-theme-tile .banner_caption {
+    background-image: url("../img/card_caption_bg.png");
+    border-radius: 0px;
+    bottom: auto;
+    color: #fff;
+    display: inline-block;
+    font-family: "Trebuchet MS";
+    font-size: 13px;
+    margin: 0;
+    padding: 20px;
+    position: absolute;
+    text-shadow: transparent;
+    top: 8px;
+	left: 8px;
+	right: 8px;
+    width: auto;
+}
+
+.banner_wrapper .banner.custom-banners-theme-tile.has_cta .banner_caption {
+    padding: 10px 20px;
+}
+
+.banner.custom-banners-theme-tile .banner_call_to_action .banner_btn_cta {
+    background: transparent url("../img/white_caption_bg.png") repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 8px;
+    text-decoration: none;
+}
+
+/* Slideshow Controls */
+.custom-b-cycle-controls.custom-banners-controls-theme-tile {
+    background-color: transparent;
+    bottom: 0;
+    height: 100%;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+	position: absolute;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile .custom-b-cycle-pager img {
+    height: 50px;
+    width: 100%;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile .custom-b-cycle-prev {
+    background-image: url("../img/tile_theme_arrow_sprite.png");
+    bottom: auto;
+    cursor: pointer;
+    height: 34px;
+    left: 15px;
+	margin-top: -37px;
+    position: absolute;
+    right: 46px;
+    text-indent: -10000px;
+    top: 50%;
+    width: 34px;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile .custom-b-cycle-next {
+    background-image: url("../img/tile_theme_arrow_sprite.png");
+    background-position: -34px 0;
+    bottom: auto;
+    cursor: pointer;
+    height: 34px;
+	margin-top: -37px;
+    position: absolute;
+    right: 15px;
+    text-indent: -10000px;
+    top: 50%;
+    width: 34px;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile .custom-b-cycle-pager {
+    background-color: #fff;
+    bottom: 0;
+    display: block;
+    height: 70px;
+    left: 0;
+    line-height: 1em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: auto;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile .custom-b-cycle-pager span::after {
+    content: none;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile .custom-b-cycle-pager span {
+    background-color: #30363a;
+    background-image: none;
+    border: 0 none;
+    border-radius: 0;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    height: 50px;
+    margin-left: 7px;
+    margin-top: 10px;
+    width: 50px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile .custom-b-cycle-pager span.cycle-pager-active {
+    background-image: none;;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile .custom-b-cycle-pager span a {
+    color: #fff;
+    display: block;
+    font-family: trebuchet ms;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: bold;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile .custom-b-cycle-pager span.cycle-pager-active a {
+    color: #30363a;
+}
+
+/* Gold Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-tile-gold .custom-b-cycle-prev {
+    background-image: url("../img/tile_theme_gold_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile-gold .custom-b-cycle-next {
+    background-image: url("../img/tile_theme_gold_arrow_sprite.png");
+}
+
+.banner_wrapper .custom-banners-theme-tile-gold.banner .banner_caption {
+    background-image: url("../img/tile_theme_gold_caption.png");
+}
+
+.banner.custom-banners-theme-tile-gold .banner_call_to_action .banner_btn_cta {
+    background: transparent url("../img/card_caption_bg.png") repeat scroll 0 0;
+}
+
+/* Red Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-tile-red .custom-b-cycle-prev {
+    background-image: url("../img/tile_theme_red_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile-red .custom-b-cycle-next {
+    background-image: url("../img/tile_theme_red_arrow_sprite.png");
+}
+
+.banner_wrapper .custom-banners-theme-tile-red.banner .banner_caption {
+    background-image: url("../img/tile_theme_red_caption.png");
+}
+
+.banner.custom-banners-theme-tile-red .banner_call_to_action .banner_btn_cta {
+    background: transparent url("../img/card_caption_bg.png") repeat scroll 0 0;
+}
+
+/* Blue Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-tile-blue .custom-b-cycle-prev {
+    background-image: url("../img/tile_theme_blue_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile-blue .custom-b-cycle-next {
+    background-image: url("../img/tile_theme_blue_arrow_sprite.png");
+}
+
+.banner_wrapper .custom-banners-theme-tile-blue.banner .banner_caption {
+    background-image: url("../img/tile_theme_blue_caption.png");
+}
+
+.banner.custom-banners-theme-tile-blue .banner_call_to_action .banner_btn_cta {
+    background: transparent url("../img/card_caption_bg.png") repeat scroll 0 0;
+}
+
+/* Green Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-tile-green .custom-b-cycle-prev {
+    background-image: url("../img/tile_theme_green_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-tile-green .custom-b-cycle-next {
+    background-image: url("../img/tile_theme_green_arrow_sprite.png");
+}
+
+.banner_wrapper .custom-banners-theme-tile-green.banner .banner_caption {
+    background-image: url("../img/tile_theme_green_caption.png");
+}
+
+.banner.custom-banners-theme-tile-green .banner_call_to_action .banner_btn_cta {
+    background: transparent url("../img/card_caption_bg.png") repeat scroll 0 0;
+}

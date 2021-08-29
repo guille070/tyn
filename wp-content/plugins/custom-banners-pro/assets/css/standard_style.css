@@ -1,0 +1,181 @@
+/* Standard Theme */
+/* White is the Default Color Scheme */
+.custom-banners-theme-standard{
+}
+
+.banner_wrapper .custom-banners-theme-standard.banner{
+    border: 0 none;
+    position: relative;
+	width: 100%;
+}
+
+.custom-banners-cycle-slideshow-theme-standard .cycle-slide{
+    right: 0;
+	left: 0;
+}
+
+.banner_wrapper .banner.custom-banners-theme-standard .banner_caption {
+    background: transparent;    
+	color: #fff; /* text color + color overlay */
+	font-family: "Arial";
+	font-size: 13px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.75); /* drop shadow */
+	top: 0;
+	bottom: auto;
+	padding: 20px;
+	font-size: 12px;
+}
+
+.banner_wrapper .banner.custom-banners-theme-standard  .banner_call_to_action .banner_btn_cta {
+    background: transparent;
+    border: 0 none;
+    border-radius: 0;
+    color: #ffffff;
+    display: inline-block;
+	font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slideshow Controls */
+.custom-b-cycle-controls.custom-banners-controls-theme-standard {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard .custom-b-cycle-prev {
+    background-image: url("../img/standard_left_arrow.png");
+    cursor: pointer;
+    height: 34px;
+    left: 12px;
+    margin-top: -17px;
+    position: absolute;
+    text-indent: -10000px;
+    top: 50%;
+    width: 20px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard .custom-b-cycle-next {
+    background-image: url("../img/standard_right_arrow.png");
+    cursor: pointer;
+    height: 34px;
+    right: 12px;
+    margin-top: -17px;
+    position: absolute;
+    text-indent: -10000px;
+    top: 50%;
+    width: 20px;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard .custom-b-cycle-pager {
+    bottom: 0;
+	display: inline-block;
+    position: absolute;
+    text-align: center;
+    width: auto;
+	z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard .custom-b-cycle-pager span {
+    color: #ddd;
+    cursor: pointer;
+    font-size: 38px;
+    line-height: 19px;
+    opacity: 0.5;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard .custom-b-cycle-pager span.cycle-pager-active {
+    opacity: 1;
+}
+
+/* Black Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-standard-black .banner_caption {
+	color: #000; /* text color + color overlay */
+}
+
+.banner_wrapper .banner.custom-banners-theme-standard-black .banner_call_to_action .banner_btn_cta {
+    color: #000;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-black .custom-b-cycle-pager span {
+    color: #000;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-black .custom-b-cycle-prev {
+    background-image: url("../img/standard_black_left_arrow.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-black .custom-b-cycle-next {
+    background-image: url("../img/standard_black_right_arrow.png");
+}
+
+/* Yellow Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-standard-yellow .banner_caption {
+	color: #fbcf61; /* text color + color overlay */
+}
+
+.banner_wrapper .banner.custom-banners-theme-standard-yellow .banner_call_to_action .banner_btn_cta {
+    color: #fbcf61;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-yellow .custom-b-cycle-pager span {
+    color: #fbcf61;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-yellow .custom-b-cycle-prev {
+    background-image: url("../img/standard_yellow_left_arrow.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-yellow .custom-b-cycle-next {
+    background-image: url("../img/standard_yellow_right_arrow.png");
+}
+
+/* Pink Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-standard-pink .banner_caption {
+	color: #ff6f6f; /* text color + color overlay */
+}
+
+.banner_wrapper .banner.custom-banners-theme-standard-pink .banner_call_to_action .banner_btn_cta {
+    color: #ff6f6f;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-pink .custom-b-cycle-pager span {
+    color: #ff6f6f;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-pink .custom-b-cycle-prev {
+    background-image: url("../img/standard_pink_left_arrow.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-pink .custom-b-cycle-next {
+    background-image: url("../img/standard_pink_right_arrow.png");
+}
+
+/* Blue Color Scheme */
+.banner_wrapper .banner.custom-banners-theme-standard-blue .banner_caption {
+	color: #0dccc0; /* text color + color overlay */
+}
+
+.banner_wrapper .banner.custom-banners-theme-standard-blue .banner_call_to_action .banner_btn_cta {
+    color: #0dccc0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-blue .custom-b-cycle-pager span {
+    color: #0dccc0;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-blue .custom-b-cycle-prev {
+    background-image: url("../img/standard_blue_left_arrow.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-standard-blue .custom-b-cycle-next {
+    background-image: url("../img/standard_blue_right_arrow.png");
+}

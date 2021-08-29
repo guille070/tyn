@@ -1,0 +1,281 @@
+/* Modern Theme */
+.custom-banners-theme-modern{
+}
+
+.cycle-slideshow.custom-banners-cycle-slideshow-theme-modern{
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 0;
+    position: relative;
+}
+
+.banner_wrapper .custom-banners-theme-modern.banner {
+    border: 0 none;
+    font-size: 13px;
+    text-align: center;
+	width: auto;
+}
+
+.banner_wrapper .custom-banners-theme-modern img{
+    border-radius: 0;
+}
+
+.banner.custom-banners-theme-modern {
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 0;
+}
+.custom-banners-cycle-slideshow.custom-banners-cycle-slideshow-theme-modern .cycle-slide{
+    right: 0;
+	left: 0;
+}
+
+.banner_wrapper .banner.custom-banners-theme-modern .banner_caption ,
+.banner_wrapper .banner.custom-banners-theme-modern.has_cta .banner_caption {
+	background-image: none;
+	text-align: right;
+	padding: 0 ;
+}
+
+.banner_wrapper .banner.custom-banners-theme-modern .banner_caption .banner_caption_inner {
+    background-image: url("../img/modern_white_bg.png");
+    border-radius: 10px;
+    bottom: 10px;
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    left: 10px;
+    line-height: 1.5em;
+    margin: 0 45px 0 0;
+    padding: 10px;
+    position: absolute;
+    right: auto;
+    top: auto;
+    width: auto;
+}
+
+.banner.custom-banners-theme-modern  .banner_call_to_action{
+	margin: 0 0 0 10px;
+}
+
+.banner.custom-banners-theme-modern .banner_call_to_action .banner_btn_cta {
+    background-color: transparent;
+    background-image: url("../img/card_caption_bg.png");
+    border: 0 none;
+    border-radius: 7px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+    padding: 3px 10px;
+    text-decoration: none;
+}
+
+/* Slideshow Controls */
+.custom-b-cycle-controls.custom-banners-controls-theme-modern {
+    background-color: transparent;
+    background-image: url("../img/modern_white_bg.png");
+    border-radius: 0 15px 15px 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern .custom-b-cycle-prev {
+    background-image: url("../img/modern_theme_white_arrow_sprite.png");
+    bottom: 6px;
+    cursor: pointer;
+    height: 34px;
+    left: auto;
+    position: absolute;
+    right: 0;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern .custom-b-cycle-next {
+    background-image: url("../img/modern_theme_white_arrow_sprite.png");
+    background-position: -34px 0;
+    bottom: 34px;
+    cursor: pointer;
+    height: 34px;
+    position: absolute;
+    right: 3px;
+    text-indent: -10000px;
+    top: auto;
+    width: 34px;
+    z-index: 9999;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern .custom-b-cycle-pager {
+    bottom: auto;
+    display: block;
+    height: auto;
+    left: 8px;
+    line-height: 1em;
+    position: absolute;
+    text-align: right;
+    top: 10px;
+    width: 18px;
+    z-index: 9999;
+}
+.custom-b-cycle-controls.custom-banners-controls-theme-modern .custom-b-cycle-pager span {
+    background-image: none;
+	background-color: lightgrey;
+    color: #4f4f4e;
+	margin-bottom: 5px;
+    cursor: pointer;
+    display: block;
+    height: 18px;
+    width: 18px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern .custom-b-cycle-pager span.cycle-pager-active {
+    background-color: #4f4f4e;
+    background-image: none;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern .custom-b-cycle-pager span a {
+    color: #4f4f4e;
+    display: block;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+    width: 18px;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern .custom-b-cycle-pager span.cycle-pager-active a{
+    color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern  .custom-b-cycle-pager span::after {
+    content: none;
+}
+
+/* Black Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-black {
+    background-image: url("../img/card_caption_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-black .custom-b-cycle-pager span.cycle-pager-active {
+    background-color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-black .custom-b-cycle-pager span.cycle-pager-active a{
+    color: #000;
+}
+
+.banner_wrapper .banner.custom-banners-theme-modern-black .banner_caption .banner_caption_inner {
+    background-image: url("../img/card_caption_bg.png");
+	color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-black .custom-b-cycle-next {
+    background-image: url("../img/modern_theme_black_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-black .custom-b-cycle-prev {
+    background-image: url("../img/modern_theme_black_arrow_sprite.png");
+}
+
+/* Purple Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-purple {
+    background-image: url("../img/modern_purple_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-purple .custom-b-cycle-pager span.cycle-pager-active {
+    background-color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-purple .custom-b-cycle-pager span.cycle-pager-active a{
+    color: #000;
+}
+
+.banner_wrapper .banner.custom-banners-theme-modern-purple .banner_caption .banner_caption_inner {
+    background-image: url("../img/modern_purple_bg.png");
+	color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-purple .custom-b-cycle-next {
+    background-image: url("../img/modern_theme_black_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-purple .custom-b-cycle-prev {
+    background-image: url("../img/modern_theme_black_arrow_sprite.png");
+}
+
+.banner.custom-banners-theme-modern-purple .banner_call_to_action .banner_btn_cta {
+    background-image: url("../img/modern_white_bg.png");
+	color: #000;
+}
+
+/* Blue Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-blue {
+    background-image: url("../img/modern_blue_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-blue .custom-b-cycle-pager span.cycle-pager-active {
+    background-color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-blue .custom-b-cycle-pager span.cycle-pager-active a{
+    color: #000;
+}
+
+.banner_wrapper .banner.custom-banners-theme-modern-blue .banner_caption .banner_caption_inner {
+    background-image: url("../img/modern_blue_bg.png");
+	color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-blue .custom-b-cycle-next {
+    background-image: url("../img/modern_theme_black_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-blue .custom-b-cycle-prev {
+    background-image: url("../img/modern_theme_black_arrow_sprite.png");
+}
+
+.banner.custom-banners-theme-modern-blue .banner_call_to_action .banner_btn_cta {
+    background-image: url("../img/modern_white_bg.png");
+	color: #000;
+}
+
+/* Green Color Scheme */
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-green {
+    background-image: url("../img/modern_green_bg.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-green .custom-b-cycle-pager span.cycle-pager-active {
+    background-color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-green .custom-b-cycle-pager span.cycle-pager-active a{
+    color: #000;
+}
+
+.banner_wrapper .banner.custom-banners-theme-modern-green .banner_caption .banner_caption_inner {
+    background-image: url("../img/modern_green_bg.png");
+	color: #fff;
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-green .custom-b-cycle-next {
+    background-image: url("../img/modern_theme_black_arrow_sprite.png");
+}
+
+.custom-b-cycle-controls.custom-banners-controls-theme-modern-green .custom-b-cycle-prev {
+    background-image: url("../img/modern_theme_black_arrow_sprite.png");
+}
+
+.banner.custom-banners-theme-modern-green .banner_call_to_action .banner_btn_cta {
+    background-image: url("../img/modern_white_bg.png");
+	color: #000;
+}

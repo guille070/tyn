@@ -1,0 +1,108 @@
+/* Fix conflicts between WP style and jQueryUI style */
+.custom_banners_reports .ui-datepicker select {
+	height: auto;
+    line-height: normal;
+    padding: 0;
+    vertical-align: bottom;
+}
+
+/*Report filters form */
+#custom_banners_report_filters {
+	border: 1px solid lightgray;
+    padding: 20px;
+}
+
+#custom_banners_report_filters .filter_field {
+    display: inline-block;
+    margin-right: 20px;	
+}
+
+#custom_banners_report_filters .filter_field input,
+#custom_banners_report_filters .filter_field select {
+	vertical-align: bottom;
+}
+
+#custom_banners_report_filters .submit_wrapper {
+    margin-top: 20px;
+}
+
+#custom_banners_report_filters .datepicker {
+	width: 130px;
+}
+
+.custom_banners_graph {
+	background-color: white;
+	border: 1px solid gray;
+	border-bottom-width: 0;
+	height:450px;
+	min-width:600px;
+	width: auto;
+}
+
+.banner_report_heading {
+	border: 1px solid gray;
+	border-bottom-width: 0;
+	margin: 0;
+	padding: 10px;
+	background-color: lightsteelblue;
+}
+
+/* Peformance table inside Banner list */
+.cbp_performance_table {
+	
+}
+.cbp_performance_table td {
+	padding: 3px 10px 3px 0;
+}
+
+/* Stats tables in reports */
+.banner_report
+{
+	margin-top: 30px;
+}
+
+.custom_banners_report_table {
+	border: 1px solid gray;
+	width: 100%;
+}
+
+.custom_banners_report_table thead th{
+	background-color: lemonchiffon;
+	font-weight: bold;
+	text-align: left;
+	min-width: 150px;
+}
+
+.custom_banners_report_table th,
+.custom_banners_report_table td {
+	padding: 5px;
+}
+
+.custom_banners_report_table th,
+.custom_banners_report_table td {
+	border-left: 1px solid lightgray;
+}
+
+.custom_banners_report_table td {
+	border-top: 1px solid lightgray;
+	background-color: white;
+}
+
+.custom_banners_report_table tr:nth-child(odd) td {
+	background-color: white;
+}
+
+.custom_banners_report_table tr:nth-child(even) td {
+	background-color: #f1f1f1;
+}
+
+.custom_banners_report_table th:first-child,
+.custom_banners_report_table td:first-child {
+	border-left: 0 none;
+}
+
+.custom_banners_report_table tr.totals_row td {
+	background-color: ivory;
+	font-weight: bold;
+}
+
