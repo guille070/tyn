@@ -23,7 +23,9 @@ if ( $shortcode!== '' ) {
 
                 <?php
                     $dom = new DOMDocument();
+                    $internal_errors = libxml_use_internal_errors(true);
                     $dom->loadHTML($shortcode);
+                    libxml_use_internal_errors($internal_errors);
                     $divs = $dom->getElementsByTagName('div');
                     $class_name_plugin = 'banner_wrapper';
                     $xpath = new DOMXpath($dom);
