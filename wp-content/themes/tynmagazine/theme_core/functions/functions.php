@@ -405,6 +405,20 @@ function theme_get_share_link_whatsapp ($post_id = null)
 }
 
 /**
+* Obtiene el enlace de compartir la pagina actual por Telegram
+*
+* @param int | WP_Post $post_id: Post ID del que obtener el link
+*/
+function theme_get_share_link_telegram ($post_id = null)
+{
+    $url = "";
+
+    $url = "https://t.me/share/url?url=" . get_the_permalink($post_id) . "&amp;text=" . urlencode(html_entity_decode(get_the_title($post_id), ENT_COMPAT, 'UTF-8'));
+
+    return $url;
+}
+
+/**
  * Share block html
  */
 function theme_share_block($post_id) {
@@ -416,10 +430,11 @@ function theme_share_block($post_id) {
     ?>
     <div class="share-block">
         <div class="soc-icon">
-            <a class="icon fa-facebook-square" href="<?php echo theme_get_share_link_facebook($post_id); ?>" target="_blank" rel="nofollow"></a>
-            <a class="icon fa-twitter" href="<?php echo theme_get_share_link_twitter($post_id); ?>" target="_blank" rel="nofollow"></a>
-            <a class="icon fa-whatsapp" href="<?php echo theme_get_share_link_whatsapp($post_id); ?>" target="_blank" rel="nofollow"></a>
-            <a class="icon fa-linkedin" href="<?php echo theme_get_share_link_linkedin($post_id); ?>" target="_blank" rel="nofollow"></a>
+            <a class="icon fa-facebook-square" href="<?php echo theme_get_share_link_facebook($post_id); ?>" target="_blank" rel="nofollow" title="Facebook"></a>
+            <a class="icon fa-twitter" href="<?php echo theme_get_share_link_twitter($post_id); ?>" target="_blank" rel="nofollow" title="Twitter"></a>
+            <a class="icon fa-whatsapp" href="<?php echo theme_get_share_link_whatsapp($post_id); ?>" target="_blank" rel="nofollow" title="Whatsapp"></a>
+            <a class="icon fa-linkedin" href="<?php echo theme_get_share_link_linkedin($post_id); ?>" target="_blank" rel="nofollow" title="Linkedin"></a>
+            <a class="icon fa-telegram" href="<?php echo theme_get_share_link_telegram($post_id); ?>" target="_blank" rel="nofollow" title="Telegram"></a>
         </div>
         <span class="icon fa-share-alt"></span>
     </div>
