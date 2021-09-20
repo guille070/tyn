@@ -112,3 +112,8 @@ body.search {
     font-style: italic;
     font-weight: bold;
 }
+
+/* Fix banner link y menu right */
+.banner .custom_banners_big_link {
+    z-index: 10;
+}
