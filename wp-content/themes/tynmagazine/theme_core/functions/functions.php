@@ -73,7 +73,7 @@ function theme_scripts_styles()
     wp_enqueue_style( 'theme-fonts', get_template_directory_uri() . '/front/css/fonts.css', array(), THEME_STYLE_VERSION, 'all' );
 
     //Load custom jquery
-    wp_deregister_script( 'jquery' ); 
+    //wp_deregister_script( 'jquery' ); 
     wp_register_script('jquery-custom', get_template_directory_uri() . '/front/js/jquery-2.2.4.min.js', false, '2.2.4', true);
     wp_enqueue_script('jquery-custom');
 
